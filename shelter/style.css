@@ -1,0 +1,1030 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: #ffffff;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 0;
+}
+
+p {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #cdcdcd;
+  margin: 0;
+}
+
+button {
+  padding: 15px 45px;
+  background: #f1cdb3;
+  border-radius: 100px;
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.side-button{
+  padding: 13px 43px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  background:none;
+}
+
+button:hover {
+background: #FDDCC4;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.wraper {
+  background: repeat url(img/noise_lines_transparent@2X.png),
+  radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+}
+
+.wraper-gray{
+  background: #F6F6F6;
+}
+
+/* header----------------------------------*/
+.header {
+  display: inline-flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 30px;
+  max-width: 1200px;
+}
+
+.logo a {
+  font-style: normal;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.08em;
+  color: #f1cdb3;
+}
+
+.logo p {
+  font-family: "Arial";
+  font-style: normal;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  padding-top: 10px;
+}
+
+/* .close-icon img {
+  display: none;
+}
+.burger-menu {
+  display: none;
+} */
+
+ul.nav li {
+  display: inline;
+}
+
+ul.nav {
+  font-family: "Arial";
+  padding: 4px 0 0 0;
+  margin: 0;
+  width: 443px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-link {
+  position: relative;
+  color: #cdcdcd;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 50px;
+  transition: color 0.5s;
+}
+
+.menu-link:hover {
+  color: #fafafa;
+  transition: all 0.5s;
+}
+
+.menu-link:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 0;
+  height: 3px;
+  background-color: #f1cdb3;
+  content: " ";
+  transition: width 0.3s ease-out;
+}
+.menu-link:hover:after {
+  width: 100%;
+}
+
+.menu-link.active-li {
+  color: #fafafa;
+  position: relative;
+  cursor:default;
+}
+
+.menu-link.active-li:after {
+  content: " ";
+  background-color: #f1cdb3;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  top: 20px;
+  position: absolute;
+}
+
+
+/*welcome------------------*/
+
+.welcome {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 180px 0 0 0;
+  height: 729px;
+}
+
+.offer {
+  max-width: 460px;
+}
+
+.offer p {
+  padding: 42px 0;
+}
+
+.offer h1 {
+  padding-top: 163px;
+  max-width: 310px;
+}
+
+
+/*about----------------------*/
+
+.about {
+  display: inline-flex;
+  width: 100%;
+  justify-content:center;
+  padding: 80px 0 100px 0;
+}
+
+.about-txt h2 {
+  max-width: 400px;
+  padding-top: 14px;
+}
+
+.about-txt p {
+  color: #4C4C4C;
+  padding-top: 24px;
+  max-width: 430px;
+}
+
+.about img{
+  padding-right: 120px;
+}
+
+
+/*pets---------------*/
+
+.pets {
+  padding: 75px 0 100px 0;
+}
+
+.pets h2 {
+  display: block;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.carousel{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.ant-carousel {
+  max-width: 990px;
+  position: relative;
+  margin: 20px 10px;
+  padding: 20px 20px 18px 0;
+}
+
+.ant-carousel-hider {
+  overflow: hidden;
+  width: 1000px;
+  padding: 10px 0 10px 10px;
+}
+
+.ant-carousel-list {
+  width: auto;
+  max-height: 450px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.arrow{
+  height: 6px;
+  padding: 20px 17px;
+  border-radius: 100%;
+  border: solid #F1CDB3;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.arrow img{
+  display: block;
+  height: 6px;
+}
+
+.arrow:hover {
+  background-color: #FDDCC4;
+  border: solid #FDDCC4;
+}
+
+.card {
+  border-radius: 9px;
+  display: block;
+  min-width: 270px;
+  margin-bottom: 10px;
+  height: auto;
+  margin-right: 90px;
+  text-align: center; 
+  transition: all 1s;
+}
+
+.card-name {
+  font-family: 'Georgia';
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
+  padding: 30px 0 30px 0;
+}
+
+.card img {
+  border-radius: 9px 9px 0px 0px;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.description {
+  border-radius: 0px 0px 9px 9px;
+  background-color: #fff;
+  margin-top: -4px;
+  padding-bottom: 34px;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+  transition: all 1s;
+}
+
+.pets button{
+  margin: 0 auto;
+  display: block;
+}
+
+
+/*help---------------------------*/
+.help{
+  padding: 80px 0 100px 0;
+}
+
+.help h2{
+  max-width: 310px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+svg{
+  height: 60px;
+}
+
+.help-items{
+  padding-top: 57px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1026px;
+}
+
+.help-items.second{
+  max-width: 860px;
+}
+
+.help-item{
+  text-align: center;
+}
+
+.help-discription{
+  font-family: 'Georgia';
+  font-size: 20px;
+  line-height: 115%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+  padding-top: 26px;
+}
+
+/*donation-------------------------*/
+.donation{
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  padding: 79px 0 99px 0;
+}
+
+.donation h2{
+max-width: 300px;
+}
+
+.donation-txt{
+  max-width: 380px;
+}
+
+.donation-dog{
+  padding: 10px 30px 0 0;
+}
+
+.bank{
+  padding: 20px 0;
+  font-family: 'Georgia';
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.credit-card{
+  max-width: 350px;
+}
+
+.credit-card-number{
+  display: flex;
+  padding: 10px 15px;
+  background: #F1CDB3;
+  border-radius: 9px;
+  transition: all 0.5s;
+}
+
+.credit-card-number:hover{
+  background: #FDDCC4;
+}
+
+.credit-card p{
+  font-family: 'Georgia';
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  padding-left: 15px;
+}
+
+.legal-information{
+  font-family: 'Arial';
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
+  padding-top: 20px;
+}
+
+
+/*contacts-------------------*/
+.contacts {
+  display: flex;
+  padding-top: 40px;
+  justify-content: space-between;
+}
+.contacts h2{
+  color: #FFFFFF;
+  max-width: 280px;
+  padding-top: 15px;
+}
+
+.footer-column{
+  display: flex;
+}
+
+.footer-column p{
+  font-family: 'Georgia';
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #F1CDB3;
+  padding-left: 20px;
+  transition: all 0.5s;
+}
+
+.footer-column p:hover{
+  color: #ffffff;
+}
+
+.questions .footer-column{
+  padding-top: 45px;
+}
+.visit {
+  margin-right: 8px;
+}
+.visit .footer-column {
+  padding-top: 35px;
+}
+/* 
+@media (max-width: 1085px) {
+  .service-menu {
+    display: block;
+    padding-top: 60px;
+  }
+  .service-btns {
+    padding-right: 0px;
+  }
+  .contacts h2 {
+    min-width: 191px;
+  }
+  .city {
+    padding: 17px 33px 30px 33px;
+  }
+}
+
+@media (max-width: 964px) {
+  .contacts {
+    flex-direction: column;
+  }
+  .contacts h2 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+  }
+  .contacts img {
+    order: 3;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 22px;
+  }
+  .contacts img.open {
+    padding-top: 16px;
+  }
+  .citys {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .select-wrapper {
+    padding-top: 98px;
+  }
+  .city {
+    margin: 61px auto 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 668px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .offer h1 {
+    font-size: 35px;
+    padding-top: 0;
+  }
+  .header {
+    padding: 35px 0;
+  }
+  .welcome {
+    flex-direction: row-reverse;
+    padding: 40px 0 70px 0;
+  }
+  .offer p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 341px;
+    padding: 29px 0 33px 3px;
+  }
+  .welcome img {
+    max-width: 280px;
+  }
+  .about {
+    display: block;
+    padding: 0 0 96px 0;
+  }
+  .about-txt h2 {
+    text-align: center;
+    margin: auto;
+    padding-top: 40px;
+  }
+  .about-txt p {
+    margin: auto;
+    max-width: 100%;
+    padding-top: 51px;
+  }
+  .about img {
+    max-width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 68px;
+  }
+  .service-menu {
+    display: block;
+    padding-top: 60px;
+  }
+  .service-btns {
+    display: flex;
+    padding-right: 0;
+    padding-top: 42px;
+  }
+  button {
+    margin-left: 42px;
+  }
+  .card {
+    max-width: 280px;
+    margin-bottom: 40px;
+  }
+  .card img {
+    min-height: 350px;
+  }
+  .desktop-card {
+    display: none;
+  }
+  .tablet-card {
+    display: block;
+  }
+  .card-description {
+    max-width: 201px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4px;
+  }
+  .card-name {
+    padding: 11px 0 10px 0;
+  }
+  .description {
+    padding-bottom: 16px;
+  }
+  .cards {
+    padding: 40px 0 32px 0;
+  }
+  .gardeners p {
+    font-size: 25px;
+    padding-top: 141px;
+    padding-bottom: 27px;
+    line-height: 35px;
+    max-width: 296px;
+  }
+  .gardeners img {
+    padding-top: 27px;
+  }
+  .tab-border {
+    margin-top: 52px;
+    padding: 34px 41px 0px 41px;
+  }
+  .prices {
+    padding-bottom: 83px;
+  }
+  .prices h2 {
+    padding-left: 14px;
+  }
+  .contacts {
+    padding-top: 33px;
+  }
+  .select-wrapper.open {
+    padding-top: 59px;
+  }
+  .footer {
+    display: block;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 17px;
+    padding-bottom: 2px;
+  }
+  .footer a {
+    margin: 16px 0;
+    text-align: center;
+  }
+  .footer-rs {
+    padding-left: 5px;
+  }
+  .git p {
+    padding-right: 20px;
+    margin: 16px 0;
+  }
+  .git {
+    padding-left: 25px;
+  }
+  .links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    padding-top: 8px;
+  }
+  .links img {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 653px) {
+  ul.nav {
+    min-width: 350px;
+    display: flex;
+    justify-content: space-around;
+  }
+  ul.nav li {
+    margin-left: auto;
+  }
+  .welcome img {
+    max-width: 250px;
+  }
+  .service-btns {
+    display: flex;
+    padding-right: 0;
+    padding-top: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service-btns button {
+    margin: 9px 0 0 0;
+  }
+  .card {
+    margin: 0 auto;
+  }
+  .prices {
+    display: block;
+  }
+  .prices h2 {
+    text-align: center;
+    max-width: 330px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+  .tab {
+    max-width: 100%;
+    margin: 14px auto 0 auto;
+  }
+  .tab-title {
+    padding-left: 30px;
+    font-size: 15px;
+  }
+  .accordion {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .tab-border {
+    max-width: 54%;
+    margin: 0 auto;
+    padding: 15px 22px 29px 22px;
+  }
+  .gardeners p {
+    padding-top: 19px;
+    margin: 0 auto;
+  }
+  .gardeners button {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 22px;
+    font-size: 15px;
+  }
+  .gardeners img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 330px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  .header {
+    max-width: 330px;
+    padding: 27px 0;
+  }
+  nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-right: 20px;
+    background: #edf2ec;
+    height: 100%;
+    z-index: 5;
+    transform: translateX(100%);
+    transition: all 1s;
+  }
+  nav.active {
+    transform: translateX(0);
+    transition: all 1s;
+  }
+  .logo img {
+    padding-top: 10px;
+  }
+  ul.nav li {
+    max-width: 70px;
+  }
+  ul.nav li a {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  ul.nav {
+    opacity: 0;
+    max-width: 80px;
+    max-width: 80px;
+    min-width: 80px;
+    margin: auto;
+    margin-top: 40px;
+    z-index: 6;
+    pointer-events: none;
+  }
+  ul.nav.active {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .close-icon img {
+    display: block;
+    padding-left: 50px;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 320px;
+    max-width: 480px;
+    background-color: #edf2ec;
+    width: 100%;
+    z-index: 5;
+  }
+  header .container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main {
+    padding-top: 82px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+  .burger-menu.active {
+    display: none;
+  }
+  #blanket {
+    display: none;
+    background-color: #111;
+    opacity: 0.65;
+    position: absolute;
+    z-index: 4;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  #blanket.active {
+    display: block;
+  }
+  .offer h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .offer p {
+    padding: 19px 0 26px 0px;
+  }
+  .welcome {
+    padding: 40px 0 23px 0;
+  }
+  .welcome img {
+    display: none;
+  }
+  .offer p {
+    max-width: 330px;
+  }
+  .offer button {
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+  .welcome img {
+    max-width: 280px;
+  }
+  .about {
+    padding: 0 0 31px 0;
+  }
+  .about p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .about-txt h2 {
+    padding-top: 30px;
+  }
+  .about-txt p {
+    padding-top: 16px;
+  }
+  .about img {
+    max-width: 150px;
+    max-height: 147px;
+    padding-top: 3px;
+  }
+  .service-btns button {
+    padding: 6px 28px;
+    font-size: 15px;
+    line-height: 20px;
+    width: 121px;
+    margin: 11px 0 0 0;
+  }
+  .service-btns {
+    display: flex;
+    padding-right: 0;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  .service-menu {
+    display: block;
+    padding-top: 30px;
+  }
+  .service-menu h2 {
+    max-width: 187px;
+  }
+  .service-btns .second-btn {
+    margin-left: 10px;
+  }
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card-name {
+    padding: 13px 0 8px 0;
+  }
+  .card {
+    margin-top: 35px;
+  }
+  .first-card {
+    margin-top: 0;
+  }
+  .description {
+    padding-bottom: 18px;
+  }
+  .cards {
+    padding: 40px 0 29px 0;
+  }
+  .prices h2 {
+    padding-left: 0;
+    padding: 15px 0 26px 0;
+  }
+  .gardeners p {
+    padding: 18px 0 20px 0;
+    text-align: center;
+    font-size: 20px;
+    width: 230px;
+  }
+  .gardeners button {
+    padding: 6px 22px;
+    height: 34px;
+    width: 121px;
+  }
+  .prices {
+    padding-bottom: 40px;
+  }
+  .contacts h2 {
+    font-size: 25px;
+  }
+  .contacts {
+    padding-top: 9px;
+    text-align: center;
+  }
+  .select-trigger {
+    min-width: 263px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 18px;
+  }
+  .open .select-trigger {
+    min-width: 263px;
+    margin-left: 14px;
+    margin-right: 14px;
+    padding: 0 18px;
+  }
+  .custom-options {
+    margin: 0 14px;
+    min-width: 298px;
+  }
+  .custom-option {
+    text-align: left;
+  }
+  .select-wrapper {
+    padding-top: 72px;
+    padding-bottom: 0px;
+  }
+  .select-wrapper.open {
+    padding-bottom: 49px;
+    padding-top: 33px;
+  }
+  .arrow {
+    margin-right: 4px;
+  }
+  .contacts img {
+    max-width: 100px;
+    padding-top: 0;
+    margin: -114px auto 0 auto;
+  }
+  .contacts img.open {
+    display: none;
+  }
+  .city {
+    margin: 0 23px 33px 25px;
+    padding: 33px 21px 22px 21px;
+  }
+  .info button {
+    margin: 8px 0 0 -58px;
+  }
+  .field {
+    max-width: 70px;
+  }
+  .field p {
+    text-align: right;
+    line-height: 20px;
+    height: 40px;
+  }
+  .info p {
+    line-height: 20px;
+    height: 40px;
+    text-align: left;
+    max-width: 160px;
+    padding-left: 10px;
+  }
+  .city-show {
+    display: flex;
+  }
+  .footer {
+    padding-top: 5px;
+    padding-bottom: 2px;
+  }
+  .git {
+    padding-left: 23px;
+  }
+  .git p {
+    padding-right: 22px;
+  }
+  .footer a {
+    margin: 4px 0;
+  }
+  .git a {
+    margin: 16px 0;
+  }
+} */
