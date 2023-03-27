@@ -1,0 +1,267 @@
+/*welcome------------------*/
+
+.welcome {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 180px 0 0 0;
+    height: 729px;
+  }
+  
+  .offer {
+    max-width: 460px;
+  }
+  
+  .offer p {
+    padding: 42px 0 57px;
+  }
+  
+  .offer h1 {
+    padding-top: 163px;
+    max-width: 310px;
+  }
+  
+  
+  /*about----------------------*/
+  
+  .about {
+    display: inline-flex;
+    width: 100%;
+    justify-content:center;
+    padding: 80px 0 100px 0;
+  }
+  
+  .about-txt h2 {
+    max-width: 400px;
+    padding-top: 14px;
+  }
+  
+  .about-txt p {
+    color: #4C4C4C;
+    padding-top: 24px;
+    max-width: 430px;
+  }
+  
+  .about img{
+    padding-right: 120px;
+  }
+  
+  
+  /*pets---------------*/
+  
+  .pets {
+    padding: 75px 0 100px 0;
+  }
+  
+  .pets h2 {
+    display: block;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .carousel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8px;
+  }
+  
+  .ant-carousel {
+    max-width: 990px;
+    position: relative;
+    margin: 20px 10px;
+    padding: 20px 20px 18px 0;
+  }
+  
+  .ant-carousel-hider {
+    overflow: hidden;
+    width: 1000px;
+    padding: 10px 0 10px 10px;
+  }
+  
+  .ant-carousel-list {
+    width: auto;
+    max-height: 450px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .arrow{
+    height: 6px;
+    padding: 20px 17px;
+    border-radius: 100%;
+    border: solid #F1CDB3;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  
+  .arrow img{
+    display: block;
+    height: 6px;
+  }
+  
+  .arrow:hover {
+    background-color: #FDDCC4;
+    border: solid #FDDCC4;
+  }
+  
+  .card {
+    border-radius: 9px;
+    display: block;
+    min-width: 270px;
+    margin-bottom: 10px;
+    height: auto;
+    margin-right: 90px;
+    text-align: center; 
+    transition: all 1s;
+    background-color: #FAFAFA;
+  }
+  
+  .card-name {
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #545454;
+    padding: 30px 0 30px 0;
+  }
+  
+  .card img {
+    border-radius: 9px 9px 0px 0px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  
+  .description {
+    border-radius: 0px 0px 9px 9px;
+    background-color: #FAFAFA;
+    margin-top: -4px;
+    padding-bottom: 34px;
+    transition: all 1s;
+  }
+  
+  .card:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    transition: all 1s;
+  }
+
+  .card:hover .description {
+    background-color: #fff;   
+  }
+
+   .button.know{
+    margin: 0 auto;
+    display: block;
+    width: 172px;
+  }
+  
+  
+  /*help---------------------------*/
+  .help{
+    padding: 80px 0 100px 0;
+  }
+  
+  .help h2{
+    max-width: 310px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  svg{
+    height: 60px;
+  }
+  
+  .help-items{
+    padding-top: 57px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1026px;
+  }
+  
+  .help-items.second{
+    max-width: 860px;
+  }
+  
+  .help-item{
+    text-align: center;
+  }
+  
+  .help-discription{
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    padding-top: 26px;
+  }
+  
+  /*donation-------------------------*/
+  .donation{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    padding: 77px 0 99px 0;
+  }
+  
+  .donation h2{
+  max-width: 300px;
+  }
+  
+  .donation-txt{
+    max-width: 380px;
+  }
+  
+  .donation-dog{
+    padding: 10px 30px 0 0;
+  }
+  
+  .bank{
+    padding: 20px 0;
+    font-family: 'Georgia';
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #545454;
+  }
+  
+  .credit-card{
+    max-width: 350px;
+  }
+  
+  .credit-card-number{
+    display: flex;
+    padding: 8px 15px;
+    background: #F1CDB3;
+    border-radius: 9px;
+    transition: all 0.5s;
+  }
+  
+  .credit-card-number:hover{
+    background: #FDDCC4;
+  }
+  
+  .credit-card p{
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    padding-left: 15px;
+  }
+  
+  .legal-information{
+    font-family: 'Arial';
+    font-style: italic;
+    font-size: 12px;
+    line-height: 18px;
+    color: #B2B2B2;
+    padding-top: 20px;
+  }
