@@ -1,0 +1,161 @@
+h1{
+    display: none;
+}
+/* header----------------------------------*/
+.header {
+  display: inline-flex;
+  position: inherit;
+  width: 100%;
+  justify-content: space-between;
+  padding: 30px 0;
+  max-width: 1200px;
+}
+
+.logo a {
+  font-style: normal;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.08em;
+  color: #545454;
+}
+
+.logo p {
+  font-family: "Arial";
+  font-style: normal;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #292929;
+  padding-top: 10px;
+}
+
+/* .close-icon img {
+    display: none;
+  }
+  .burger-menu {
+    display: none;
+  } */
+
+ul.nav li {
+  display: inline;
+}
+
+ul.nav {
+  font-family: "Arial";
+  padding: 4px 0 0 0;
+  margin: 0;
+  width: 443px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-link {
+  position: relative;
+  color: #545454;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 50px;
+  transition: color 0.5s;
+}
+
+.menu-link:hover {
+  color: #292929;
+  transition: all 0.5s;
+}
+
+.menu-link.active-li {
+  color: #292929;
+  position: relative;
+  cursor: default;
+}
+
+.menu-link.active-li:after {
+  content: " ";
+  background-color: #f1cdb3;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  top: 20px;
+  position: absolute;
+}
+
+/*pets---------------*/
+
+.pets {
+  padding: 80px 0 100px 0;
+}
+
+.pets h2 {
+  display: block;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding-top: 60px;
+}
+
+.card {
+  border-radius: 9px;
+  display: block;
+  min-width: 270px;
+  margin-bottom: 25px;
+  height: auto;
+  text-align: center;
+  background-color: #FAFAFA;
+  transition: all 1s;
+}
+  
+.card-name {
+    font-family: 'Georgia';
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #545454;
+    padding: 30px 0 30px 0;
+  }
+  
+  .card img {
+    border-radius: 9px 9px 0px 0px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  
+  .description {
+    border-radius: 0px 0px 9px 9px;
+    background-color: #FAFAFA;;
+    margin-top: -4px;
+    padding-bottom: 34px;
+    transition: all 1s;
+  }
+  
+  .card:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    transition: all 1s;
+  }
+  .card:hover .description {
+    background-color: #fff;   
+  }
+  
+.navigation{
+    width: 52px;
+    height: 52px;
+    padding: 0;
+}
+.card-navigation{
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 32px;
+    width: 340px;
+}
+
