@@ -159,3 +159,46 @@ ul.nav {
     width: 340px;
 }
 
+@media (max-width: 768px) {
+.tablet-card{
+  display:none ;
+}
+.carousel {
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 29px;
+}
+
+.card-navigation {
+  padding-top: 12px;
+}
+.card {
+  margin-bottom: 26px;;
+}
+.pets {
+  padding: 80px 0 75px 0;
+}
+}
+
+@media (max-width: 540px){
+  .carousel {
+    max-width: 270px;
+    padding-top: 42px;
+  }
+}
+
+@media (max-width: 480px){
+.pets {
+    padding: 42px 0;
+}
+
+.mobil-card{
+  display: none;
+}
+
+.card-navigation {
+  padding-top: 13px;
+  width: 300px;
+}
+}
+
