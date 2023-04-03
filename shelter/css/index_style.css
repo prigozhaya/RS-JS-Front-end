@@ -21,6 +21,9 @@
     max-width: 310px;
   }
   
+  .offer-puppy{
+    max-width: 698px;
+  }
   
   /*about----------------------*/
   
@@ -70,18 +73,18 @@
   .ant-carousel {
     max-width: 990px;
     position: relative;
-    margin: 20px 10px;
-    padding: 20px 20px 18px 0;
+    margin: 20px 0px;
+    padding: 20px 0 18px 0;
   }
   
   .ant-carousel-hider {
     overflow: hidden;
-    width: 1000px;
-    padding: 10px 0 10px 10px;
+    width: 990px;
+    padding: 10px 0 10px 0px;
   }
   
   .ant-carousel-list {
-    width: auto;
+    max-width: 990px;
     max-height: 450px;
     margin: 0;
     padding: 0;
@@ -97,7 +100,9 @@
     transition: all 0.5s;
     cursor: pointer;
   }
-  
+  .mobile-arrow{
+    display: none;
+  }
   .arrow img{
     display: block;
     height: 6px;
@@ -178,16 +183,13 @@
   }
   
   .help-items{
-    padding-top: 57px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    max-width: 1026px;
-  }
-  
-  .help-items.second{
-    max-width: 860px;
-  }
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 120px;
+    row-gap: 55px;
+    padding-top: 60px;
+}
   
   .help-item{
     text-align: center;
@@ -208,7 +210,7 @@
     display: inline-flex;
     width: 100%;
     justify-content: center;
-    padding: 77px 0 99px 0;
+    padding: 80px 0 99px 0;
   }
   
   .donation h2{
@@ -265,3 +267,321 @@
     color: #B2B2B2;
     padding-top: 20px;
   }
+
+  /*Adaptive--------------------------------------------*/
+
+  @media (max-width: 1100px) {
+    /*offer---------------------*/
+    .welcome {
+      display: block;
+      width: 100%;
+      padding: 150px 0 0 0;
+      height: auto;
+    }
+    
+    .offer {
+      margin: auto;
+    }
+
+    .offer p{
+      padding: 42px 0;
+    }
+    
+    .offer .button{
+      text-align: center;
+      margin: auto;
+      display: block;
+      width: 118px;
+    }
+    
+    .offer h1 {
+      padding-top: 0;
+    }
+    
+    .offer-puppy{
+      max-width: 569px;
+      margin-right: 0;
+      margin-left: auto;
+      display: block;
+      padding-top: 100px;
+    }
+
+  /*about----------------------*/
+  
+    .about {
+      display: inline-flex;
+      width: 100%;
+      justify-content:space-between;
+      padding: 80px 0 100px 0;
+    }
+
+    .about img{
+      padding-right: 60px;
+    }
+
+    /*pets-----------------------*/
+
+    .ant-carousel {
+      max-width: 640px;
+      position: relative;
+      margin: 20px 0px;
+      padding: 20px 0 18px 0;
+    }
+    
+    .ant-carousel-hider {
+      overflow: hidden;
+      width: 640px;
+      padding: 10px 0 10px 0px;
+    }
+    
+    .ant-carousel-list {
+      max-width: 590px;
+      max-height: 450px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .third{
+      display: none;
+    }
+
+    /*help----------*/
+    
+    .help-items{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      column-gap: 60px;
+      row-gap: 55px;
+      padding-top: 57px;
+      max-width: 89%;
+      margin: auto;
+    }
+
+    /*donation----------------*/
+
+    .donation {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      padding: 77px 0 99px 0;
+    }
+
+    .donation-dog {
+      max-width: 505px;
+      padding: 60px 0 0 0;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+
+  /*about----------------------*/
+  
+    .about {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 66px 0 100px 0;
+    }
+
+    .about img {
+      padding-right: 0;
+      padding-top: 80px;
+    }
+
+    /*pets-----------------------*/
+      .pets{
+        padding-top: 77px;
+      }
+    .ant-carousel {
+      max-width: 590px;
+    }
+    
+    .ant-carousel-hider {
+      width: 590px;
+    }
+    
+    .ant-carousel-list {
+      padding: 0 10px;
+      max-width: 580px;
+      justify-content: space-between;
+    }
+
+    .card {
+      margin-right: 0;
+    }
+
+    .third{
+      display: none;
+    }
+
+    /*help--------------------*/
+
+    .help-item{
+      display: block;
+      width: 170px;
+    }
+    /*donation----------------*/
+
+    .donation {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 0 96px 0;
+    }
+
+    .donation-dog {
+    max-width: 505px;
+    padding: 60px 0 0 0;
+  }
+  }
+
+  @media (max-width: 700px) {
+    /*welcome------------*/
+    .offer-puppy{
+      max-width: 81%;
+    }
+    /*pets-----------------------*/
+
+    .ant-carousel {
+      max-width: 300px;
+    }
+    
+    .ant-carousel-hider {
+      width: 300px;
+    }
+    
+    .ant-carousel-list {
+      max-width: 300px;
+    }
+
+    .card.second{
+      display: none;
+    }
+
+    /*donation----------*/
+    .donation-dog {
+      max-width: 81%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+
+  /*offer--------*/
+  .offer-puppy {
+    max-width: 81.3%;
+    padding: 104px 10px 0 0;
+  }
+
+    .offer h1 {
+    max-width: 200px;
+    margin: 0 auto;
+    letter-spacing: 0.06em;
+  }
+  .offer p {
+    padding: 42px 0;
+    max-width: 291px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /*about--------------*/
+  .about {
+    padding: 28px 0 40px 0;
+  }
+  .about-txt h2 {
+    max-width: 220px;
+    padding: 14px 0 1px 0;
+    margin: 0 auto;
+  }
+  .about-txt p {
+    padding-top: 23px;
+    max-width: 270px;
+    text-align: justify;
+  }
+  .about img {
+    padding-top: 40px;
+    max-width: 260px;
+  }
+  /*pets----------------*/
+  .pets {
+    padding: 41px 0 42px 0;
+  }
+  .desktop-arrow{
+    display: none;
+  }
+  .carousel {
+    display: block;
+    padding-bottom: 30px;
+  }
+  .ant-carousel-list {
+    justify-content: center;
+  }
+  .ant-carousel {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 23px 0 0 0;
+  }
+  .mobile-arrow {
+    max-width: 184px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  /*help-------------*/
+  .help {
+    padding: 42px 0 40px 0;
+  }
+  .help h2 {
+    max-width: 270px;
+  }
+  .help-item svg{
+    height: 50px;
+  }
+  .help-item {
+    width: 130px;
+  }
+  .help-discription {
+    font-size: 15px;
+    padding-top: 17px;
+  }
+  .help-items {
+    max-width: 91%;
+    column-gap: 30px;
+    row-gap: 29px;
+    padding-top: 40px;
+  }
+ /*donation--------------*/
+ .donation h2 {
+  max-width: 210px;
+  margin: 0 auto;
+  }
+  .donation {
+    padding: 42px 0 ;
+  }
+  .bank {
+    padding: 24px 0;
+    margin: 0 auto;
+    max-width: 275px;
+    letter-spacing: 0;
+}
+.credit-card p {
+  font-size: 15px;
+  line-height: 170%;
+}
+.credit-card-number {
+  max-width: 251px;
+  margin: 0 auto;
+}
+.legal-information {
+  max-width: 280px;
+  text-align: justify;
+}
+.donation-dog {
+  padding: 42px 0 0 0;
+}
+}
+  
