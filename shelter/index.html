@@ -19,8 +19,12 @@
             <a href="#">Cozy House</a>
             <p>Shelter for pets in Boston</p>
           </div>
+          <div class="burger-menu">
+            <span class="first-span"></span>
+            <span class="second-span"></span>
+            <span class="third-span"></span>
+          </div>
 
-          <img src="img/burger.svg" alt="" class="burger-menu">
           <nav>
             <ul class="nav">
               <li>
@@ -89,62 +93,30 @@
             </h2>
 
             <div class="carousel">
-              <div class="arrow desktop-arrow">
+              <div class="arrow desktop-arrow left">
                 <img src="img/Arrow-left.png" alt="left">
               </div>
 
               <div class="ant-carousel">
                 <div class="ant-carousel-hider">
                   <div class="ant-carousel-list">
-                    <div class="card">
-                      <img src="img/pets-katrine.png" alt="Katrine">
-                      <div class="description">
-                        <p class="card-name">Katrine</p>
-                        <button class="button side-button" data-value="Learn">
-                          Learn more
-                        </button>
-                      </div>
-                    </div>
-                    <div class="card second">
-                      <img src="img/pets-jennifer.png" alt="Jennifer">
-                      <div class="description">
-                        <p class="card-name">Jennifer</p>
-                        <button class="button side-button" data-value="Learn">
-                          Learn more
-                        </button>
-                      </div>
-                    </div>
-                    <div class="card third">
-                      <img src="img/pets-woody.png" alt="Woody" >
-                      <div class="description">
-                        <p class="card-name">Woody</p>
-                        <button class="button side-button" data-value="Learn">
-                          Learn more
-                        </button>
-                      </div>
-                    </div>
-                    <div class="card" style="display: none">
-                      <img src="img/pets-woody.png" alt="Woody">
-                      <div class="description">
-                        <p class="card-name">Woody</p>
-                        <button class="button side-button" data-value="Learn">
-                          Learn more
-                        </button>
-                      </div>
-                    </div>
+                    
+                    <div class="card" id="1" data-value="1"></div>
+                    <div class="card second" id="2" data-value="2"></div>
+                    <div class="card third" id="3" data-value="3"></div>
 
                   </div>
                 </div>
               </div>
-              <div class="arrow desktop-arrow">
+              <div class="arrow desktop-arrow right">
                 <img src="img/Arrow-right.png" alt="right">
               </div>
 
               <div class="mobile-arrow">
-                <div class="arrow">
+                <div class="arrow left">
                   <img src="img/Arrow-left.png" alt="left">
                 </div>
-                <div class="arrow">
+                <div class="arrow right">
                   <img src="img/Arrow-right.png" alt="right">
                 </div>
               </div>
@@ -463,6 +435,29 @@
         </footer>
       </div>
     </div>
-    <script src="script.js"></script>
+
+      <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+          <div class="close-popup" id="close-popup">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" id="close-popup">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42618 6.00003L11.7046 1.72158C12.0985 1.32775 12.0985 0.689213 11.7046 0.295433C11.3108 -0.0984027 10.6723 -0.0984027 10.2785 0.295433L5.99998 4.57394L1.72148 0.295377C1.32765 -0.098459 0.68917 -0.098459 0.295334 0.295377C-0.0984448 0.689213 -0.0984448 1.32775 0.295334 1.72153L4.57383 5.99997L0.295334 10.2785C-0.0984448 10.6723 -0.0984448 11.3108 0.295334 11.7046C0.68917 12.0985 1.32765 12.0985 1.72148 11.7046L5.99998 7.42612L10.2785 11.7046C10.6723 12.0985 11.3108 12.0985 11.7046 11.7046C12.0985 11.3108 12.0985 10.6723 11.7046 10.2785L7.42618 6.00003Z" fill="#292929"/>
+              </svg>              
+          </div>
+            <div class="popup-img"></div>
+            <div class="popup-discription">
+            <p class="popup-pet-name"></p>
+            <p class="popup-pet-type"></p>
+            <p class="popup-pet-discription"></p>
+            <ul class="popup-pet-info">
+              <li><span class="pet-info-span">Age:</span> <span class="popup-pet-age"></span></li>
+              <li><span class="pet-info-span">Inoculations:</span> none</li>
+              <li><span class="pet-info-span">Diseases:</span> none</li>
+              <li><span class="pet-info-span">Parasites:</span> none</li>
+            </ul>
+            </div>
+        </div>
+      </div>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/script_index.js"></script>
   </body>
 </html>

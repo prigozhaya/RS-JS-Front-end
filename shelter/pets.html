@@ -20,14 +20,16 @@
             <p>Shelter for pets in Boston</p>
           </div>
 
-          <img src="img/pets-burger.svg" alt="" class="burger-menu">
+          <div class="burger-menu">
+            <span class="first-span"></span>
+            <span class="second-span" style="height: 2px;"></span>
+            <span class="third-span"></span>
+          </div>
           <nav>
             <ul class="nav">
-              <li>
-                <a href="index.html" class="menu-link">About the shelter</a>
-              </li>
+              <li><a href="index.html" class="menu-link">About the shelter</a></li>
               <li><a href="#" class="menu-link  active-li">Our pets</a></li>
-              <li><a href="#help" class="menu-link">Help the shelter</a></li>
+              <li><a href="index.html#help" class="menu-link">Help the shelter</a></li>
               <li><a href="#contacts" class="menu-link">Contacts</a></li>
             </ul>
           </nav>
@@ -46,85 +48,79 @@
                     </h2>
 
                     <div class="carousel">
-                        <div class="card">
-                            <img src="img/pets-katrine.png" alt="Katrine">
-                            <div class="description">
-                            <p class="card-name">Katrine</p>
-                            <button class="button side-button" data-value="Learn">
+                        <div class="card" id="1">
+
+                        </div>
+                        <div class="card" id="2">
+                            <img src="img/pets-jennifer.png" alt="Jennifer" data-value="2">
+                            <div class="description" data-value="2">
+                            <p class="card-name" data-value="2">Jennifer</p>
+                            <button class="button side-button" data-value="Learn" data-value="2">
                                 Learn more
                             </button>
                             </div>
                         </div>
-                        <div class="card">
-                            <img src="img/pets-jennifer.png" alt="Jennifer">
-                            <div class="description">
-                            <p class="card-name">Jennifer</p>
-                            <button class="button side-button" data-value="Learn">
+                        <div class="card" id="3">
+                            <img src="img/pets-woody.png" alt="Woody" data-value="3">
+                            <div class="description" data-value="3">
+                            <p class="card-name" data-value="3">Woody</p>
+                            <button class="button side-button" data-value="Learn" data-value="3">
                                 Learn more
                             </button>
                             </div>
                         </div>
-                        <div class="card">
-                            <img src="img/pets-woody.png" alt="Woody">
-                            <div class="description">
-                            <p class="card-name">Woody</p>
-                            <button class="button side-button" data-value="Learn">
-                                Learn more
-                            </button>
-                            </div>
-                        </div>
-                        <div class="card mobil-card">
-                            <img src="img/pets-sophia.png" alt="Sophia">
-                            <div class="description">
-                                <p class="card-name">Sophia</p>
-                                <button class="button side-button" data-value="Learn">
+                        <div class="card mobil-card" id="4">
+                            <img src="img/pets-sophia.png" alt="Sophia" data-value="4">
+                            <div class="description" data-value="4">
+                                <p class="card-name" data-value="4">Sophia</p>
+                                <button class="button side-button" data-value="Learn" data-value="4">
                                 Learn more
                                 </button>
                             </div>
                         </div>
-                        <div class="card mobil-card">
-                            <img src="img/pets-timmy.png" alt="Timmy">
-                            <div class="description">
-                                <p class="card-name">Timmy</p>
-                                <button class="button side-button" data-value="Learn">
+                        <div class="card mobil-card" id="5"> 
+                            <img src="img/pets-timmy.png" alt="Timmy" data-value="5">
+                            <div class="description" data-value="5">
+                                <p class="card-name" data-value="5">Timmy</p>
+                                <button class="button side-button" data-value="Learn" data-value="5">
                                 Learn more
                                 </button>
                             </div>
                         </div>
-                        <div class="card mobil-card">
-                            <img src="img/pets-charly.png" alt="Charly">
-                            <div class="description">
-                                <p class="card-name">Charly</p>
-                                <button class="button side-button" data-value="Learn">
+                        <div class="card mobil-card" id="6">
+                            <img src="img/pets-charly.png" alt="Charly" data-value="6">
+                            <div class="description" data-value="6">
+                                <p class="card-name" data-value="6">Charly</p>
+                                <button class="button side-button" data-value="Learn" data-value="6">
                                 Learn more
                                 </button>
                             </div>
                         </div>
-                        <div class="card tablet-card">
-                            <img src="img/pets-scarlet.png" alt="Scarlet">
-                            <div class="description">
-                                <p class="card-name">Scarlet</p>
-                                <button class="button side-button" data-value="Learn">
+                        <div class="card tablet-card" id="7">
+                            <img src="img/pets-scarlet.png" alt="Scarlet" data-value="7">
+                            <div class="description" data-value="7">
+                                <p class="card-name" idata-value="7">Scarlet</p>
+                                <button class="button side-button" data-value="Learn" data-value="7">
                                 Learn more
                                 </button>
                             </div>
                         </div>
-                        <div class="card tablet-card">
-                            <img src="img/pets-freddie.png" alt="Freddie">
-                            <div class="description">
-                                <p class="card-name">Freddie</p>
-                                <button class="button side-button" data-value="Learn">
+                        <div class="card tablet-card" id="8">
+                            <img src="img/pets-freddie.png" alt="Freddie" data-value="8">
+                            <div class="description" data-value="8">
+                                <p class="card-name" data-value="8">Freddie</p>
+                                <button class="button side-button" data-value="Learn" data-value="8">
                                 Learn more
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div class="card-navigation">
-                        <button type="button" class="button side-button navigation" disabled>&lt;&lt;</button>
-                        <button type="button" class="button side-button navigation" disabled>&lt;</button>
-                        <button type="button" class="button side-button navigation active">1</button>
-                        <button type="button" class="button side-button navigation">></button>
-                        <button type="button" class="button side-button navigation">>></button>
+                        <button type="button" class="button side-button navigation" disabled id="first-button">&lt;&lt;</button>
+                        <button type="button" class="button side-button navigation" disabled id="prev-button">&lt;</button>
+                        <button type="button" class="button side-button navigation active" id="pagination-page">1</button>
+                        <button type="button" class="button side-button navigation" id="next-button">></button>
+                        <button type="button" class="button side-button navigation" id="last-button">>></button>
                     </div>
                 </section>
             </div>
@@ -193,6 +189,29 @@
         </footer>
       </div>
     </div>
-    <script src="script.js"></script>
+
+    <div class="popup-overlay" id="popup-overlay">
+      <div class="popup-content">
+        <div class="close-popup" id="close-popup">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" id="close-popup">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42618 6.00003L11.7046 1.72158C12.0985 1.32775 12.0985 0.689213 11.7046 0.295433C11.3108 -0.0984027 10.6723 -0.0984027 10.2785 0.295433L5.99998 4.57394L1.72148 0.295377C1.32765 -0.098459 0.68917 -0.098459 0.295334 0.295377C-0.0984448 0.689213 -0.0984448 1.32775 0.295334 1.72153L4.57383 5.99997L0.295334 10.2785C-0.0984448 10.6723 -0.0984448 11.3108 0.295334 11.7046C0.68917 12.0985 1.32765 12.0985 1.72148 11.7046L5.99998 7.42612L10.2785 11.7046C10.6723 12.0985 11.3108 12.0985 11.7046 11.7046C12.0985 11.3108 12.0985 10.6723 11.7046 10.2785L7.42618 6.00003Z" fill="#292929"/>
+            </svg>              
+        </div>
+          <div class="popup-img"></div>
+          <div class="popup-discription">
+          <p class="popup-pet-name"></p>
+          <p class="popup-pet-type"></p>
+          <p class="popup-pet-discription"></p>
+          <ul class="popup-pet-info">
+            <li><span class="pet-info-span">Age:</span> <span class="popup-pet-age"></span></li>
+            <li><span class="pet-info-span">Inoculations:</span> none</li>
+            <li><span class="pet-info-span">Diseases:</span> none</li>
+            <li><span class="pet-info-span">Parasites:</span> none</li>
+          </ul>
+          </div>
+      </div>
+    </div>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/script_pets.js"></script>
   </body>
 </html>
