@@ -93,7 +93,7 @@ for (let k of card) {
   k.addEventListener("click", function (e) {
     let i = e.target.dataset.value;
     togglePopup();
-    getCardInfo(popupCards, i);
+    getCardInfo(i);
   });
 }
 

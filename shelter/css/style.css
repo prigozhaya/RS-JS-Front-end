@@ -400,7 +400,7 @@ background-color: #F1CDB3;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     max-width: 708px;
   }
@@ -465,7 +465,7 @@ text-align: center;
 }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.5px) {
   .burger-menu {
     width: 30px;
     margin-top: 20px;
