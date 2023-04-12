@@ -132,7 +132,7 @@ h1{
     width: 340px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.5px) {
 .tablet-card{
   display:none ;
 }
