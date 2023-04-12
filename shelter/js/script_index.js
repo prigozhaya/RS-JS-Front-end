@@ -1,3 +1,5 @@
+import dataCards from './cards.json' assert {type: 'json'};
+
 /*generate cards-----------------------------------*/
 
 let cardsArr = [];
@@ -18,12 +20,10 @@ function generateCardsArr() {
 }
 generateCardsArr();
 
-async function generateCard(popupCards, i, card) {
-  const res = await fetch(popupCards);
-  const data = await res.json();
-  document.getElementById(`${i}`).innerHTML = `${data[0][card].petImg} 
+async function generateCard(i, card) {
+  document.getElementById(`${i}`).innerHTML = `${dataCards[0][card].petImg} 
   <div class="description" data-value="${card}">
-    <p class="card-name" data-value="${card}">${data[0][card].petName}</p>
+    <p class="card-name" data-value="${card}">${dataCards[0][card].petName}</p>
     <button class="button side-button" data-value="Learn" data-value="${card}">
       Learn more
     </button>
@@ -32,7 +32,7 @@ async function generateCard(popupCards, i, card) {
 
 function generateActualCards (){
   for (let i = 1; i < 4; i++) {
-  generateCard(popupCards, i, cardsArr[i]);
+  generateCard(i, cardsArr[i]);
 }
 }
 generateActualCards ()
