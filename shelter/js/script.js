@@ -1,3 +1,6 @@
+
+import dataCards from './cards.json' assert {type: 'json'};
+
 /*burger-menu------------------------------------------------------------------------------------------------------------------------------------*/
 let menuBtn = document.querySelector(".burger-menu");
 let menu = document.querySelector("nav");
@@ -46,7 +49,7 @@ if (window.screen.width < 768) {
   }
 }
 
-// window.onresize = OnResize;
+window.onresize = OnResize;
 
 
 /*popup-----------------------------------------------------------------------------------------------------------------------*/
@@ -61,16 +64,13 @@ let popupImg = document.querySelector(".popup-img");
 
 let card = document.querySelectorAll(".card");
 
-let popupCards = "/js/cards.json";
 
-async function getCardInfo(popupCards, i) {
-  const res = await fetch(popupCards);
-  const data = await res.json();
-  popupPetName.innerHTML = data[0][i].petName;
-  popupPetType.innerHTML = data[0][i].petType;
-  popupPetDiscription.innerHTML = data[0][i].petDiscription;
-  popupPetAge.innerHTML = data[0][i].petAge;
-  popupImg.innerHTML = `${data[0][i].petImg}`;
+async function getCardInfo(i) {
+  popupPetName.innerHTML = dataCards[0][i].petName;
+  popupPetType.innerHTML = dataCards[0][i].petType;
+  popupPetDiscription.innerHTML = dataCards[0][i].petDiscription;
+  popupPetAge.innerHTML = dataCards[0][i].petAge;
+  popupImg.innerHTML = `${dataCards[0][i].petImg}`;
 }
 
 function togglePopup() {

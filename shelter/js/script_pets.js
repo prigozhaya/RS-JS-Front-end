@@ -1,7 +1,8 @@
+import dataCards from './cards.json' assert {type: 'json'};
+
 /*Pagination------------------------------------------------------------------------------*/
 let petsCardsArr = [];
 let page = 1;
-let cards = "/js/cards.json";
 let nextButton = document.getElementById("next-button");
 let prevButton = document.getElementById("prev-button");
 let firstButton = document.getElementById("first-button");
@@ -51,12 +52,10 @@ function generatePetsCardsArr() {
 petsCardsArr = generatePetsCardsArr();
 console.log(petsCardsArr);
 
-async function generatePetsCard(cards, i, card) {
-  const res = await fetch(cards);
-  const data = await res.json();
-  document.getElementById(`${i}`).innerHTML = `${data[0][card].petImg}
+async function generatePetsCard(i, card) {
+  document.getElementById(`${i}`).innerHTML = `${dataCards[0][card].petImg}
   <div class="description" data-value="${i}">
-    <p class="card-name" data-value="${i}">${data[0][card].petName}</p>
+    <p class="card-name" data-value="${i}">${dataCards[0][card].petName}</p>
     <button class="button side-button" data-value="Learn" data-value="${i}">
       Learn more
     </button>
@@ -68,12 +67,11 @@ function generateActualCards(page) {
     window.screen.width > 768 ? 8 : window.screen.width < 481 ? 3 : 6;
   for (let i = 1; i <= amount; i++) {
     if (page === 1) {
-      setTimeout(generatePetsCard, 200, cards, i, petsCardsArr[i - 1]);
+      setTimeout(generatePetsCard, 200, i, petsCardsArr[i - 1]);
     } else {
       setTimeout(
         generatePetsCard,
         200,
-        cards,
         i,
         petsCardsArr[i - 1 + (page - 1) * amount]
       );
