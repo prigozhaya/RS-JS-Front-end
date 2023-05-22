@@ -14,13 +14,13 @@
   margin: 20px auto;
 }
 .interface.dark .volume {
-  background-image: url(/assets/volume-dark.svg);
+  background-image: url("../assets/volume-dark.svg");
 }
 .interface.dark .volume.mute {
-  background-image: url(/assets/mute-dark.svg);
+  background-image: url("../assets/mute-dark.svg");
 }
 .interface.dark .refresh {
-  background-image: url(/assets/refresh-dark.svg);
+  background-image: url("../assets/refresh-dark.svg");
 }
 .interface p {
   margin: auto 0 0 0;
@@ -37,7 +37,7 @@
   background-color: #0f5d2c;
 }
 .map.dark .block.hide.flag {
-  background-image: url(/assets/flag.png);
+  background-image: url("../assets/flag.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -80,7 +80,7 @@
 }
 
 .refresh {
-  background-image: url(/assets/refresh.svg);
+  background-image: url("../assets/refresh.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 28px;
@@ -89,7 +89,7 @@
 }
 
 .volume {
-  background-image: url(/assets/volume.svg);
+  background-image: url("../assets/volume.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 28px;
@@ -97,11 +97,11 @@
   cursor: pointer;
 }
 .volume.mute {
-  background-image: url(/assets/mute.svg);
+  background-image: url("../assets/mute.svg");
 }
 
 .theme {
-  background-image: url(/assets/dark-theme.svg);
+  background-image: url("../assets/dark-theme.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 28px;
@@ -110,7 +110,7 @@
   cursor: pointer;
 }
 .theme.dark {
-  background-image: url(/assets/light-theme.svg);
+  background-image: url("../assets/light-theme.svg");
 }
 
 .size-switcher {
@@ -4077,7 +4077,7 @@
   border: 1px solid #ad8139;
 }
 .map.hard .block.flag {
-  background-image: url(/assets/flag-hard.png);
+  background-image: url("../assets/flag-hard.png");
 }
 .map.dark.hard .block {
   border: 1px solid #d1b17d;
@@ -4107,7 +4107,7 @@
   background-color: #9ae87e;
 }
 .block.hide.flag {
-  background-image: url(/assets/flag.png);
+  background-image: url("../assets/flag.png");
   background-repeat: no-repeat;
   background-position: center;
 }
