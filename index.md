@@ -1,4 +1,4 @@
-1. [link]([https://github.com/rolling-scopes-school/tasks/blob/master/tasks/minesweeper/README.md](https://youtu.be/2XRsOFZWGg0))
+[1. [link]([https://github.com/rolling-scopes-school/tasks/blob/master/tasks/minesweeper/README.md](https://youtu.be/2XRsOFZWGg0))](https://youtu.be/2XRsOFZWGg0)
 
 I’m Prigozhaya Lizaveta Konstantinovna, 22 years old and I'm a junior frontend developer. (yea welcome to the club)
 
