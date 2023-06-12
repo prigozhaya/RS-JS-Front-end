@@ -23,9 +23,9 @@ export type Source = {
 };
 
 export type CommonResponse = {
-    articles?: Array<Article>;
-    totalResults?: number;
-    sources?: Array<Source>;
+    articles: Array<Article>;
+    totalResults: number;
+    sources: Array<Source>;
     status: string;
 };
 
@@ -48,7 +48,7 @@ export enum HTTPMethods {
 }
 
 export interface ILoader {
-    getResp({ endpoint, options }: EndpointObject, callback: (data: CommonResponse) => void): void;
+    getResp({ endpoint, options }: EndpointObject, callback: (data: Partial<CommonResponse>) => void): void;
 }
 
 export interface IAppView {

@@ -11,12 +11,12 @@ export class AppView implements IAppView {
         this.sources = new Sources();
     }
 
-    drawNews(data: CommonResponse) {
+    drawNews(data: Pick<CommonResponse, "articles"| "status">) {
         const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 
-    drawSources(data: CommonResponse) {
+    drawSources(data: Pick<CommonResponse, "sources"| "status">) {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }
