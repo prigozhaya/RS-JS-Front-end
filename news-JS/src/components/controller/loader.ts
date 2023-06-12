@@ -12,8 +12,8 @@ class Loader implements ILoader{
 
     getResp(
         { endpoint, options = {} }: EndpointObject,
-        callback = (data: CommonResponse) => {
-            console.error('No callback for GET response');
+        callback = (_data: CommonResponse) => {
+            console.error('No callback for GET response', _data);
         }
     ) {
         this.load(HTTPMethods.GET, endpoint, callback, options);

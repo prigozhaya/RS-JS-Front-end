@@ -1,7 +1,7 @@
-import { Article } from '../../../model/model';
+import { Article, INews } from '../../../model/model';
 import './news.css';
 
-class News {
+class News implements INews {
     draw(data: Readonly<Array<Article>>) {
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
@@ -16,7 +16,7 @@ class News {
 
             const newsMetaPhotoEl = newsClone.querySelector<HTMLElement>('.news__meta-photo');
             if (newsMetaPhotoEl)
-                newsMetaPhotoEl.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
+                newsMetaPhotoEl.style.backgroundImage = `url(${item.urlToImage || 'https://i.ibb.co/k8ZhpLQ/spinner.png'})`;
 
             const newsMetaAuthorEl = newsClone.querySelector('.news__meta-author');
             if (newsMetaAuthorEl) newsMetaAuthorEl.textContent = item.author || item.source.name;

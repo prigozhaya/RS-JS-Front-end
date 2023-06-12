@@ -29,9 +29,13 @@ export type CommonResponse = {
     status: string;
 };
 
+export type ArticleResponse = Pick<CommonResponse, "articles"| "status" | "totalResults">;
+
+export type SourceResponse = Pick<CommonResponse, "sources"| "status">;
+
 export interface IAppController {
-    getSources(callback: (data: CommonResponse) => void): void;
-    getNews(e: Event, callback: (data: CommonResponse) => void): void;
+    getNews(e: Event, callback: (data: ArticleResponse) => void): void;
+    getSources(callback: (data: SourceResponse) => void): void;
 }
 
 export type EndpointObject = {
@@ -52,10 +56,14 @@ export interface ILoader {
 }
 
 export interface IAppView {
-  drawNews(data: CommonResponse): void;
-  drawSources(data: CommonResponse): void;
+  drawNews(data: ArticleResponse): void;
+  drawSources(data: SourceResponse): void;
 }
 
 export interface ISources {
-  draw(data: Array<Source>): void;
+  draw(data: Readonly<Array<Source>>): void;
 }
+
+export interface INews {
+    draw(data: Readonly<Array<Article>>): void;
+  }

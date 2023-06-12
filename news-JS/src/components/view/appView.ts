@@ -1,4 +1,4 @@
-import { CommonResponse, IAppView } from '../../model/model';
+import { ArticleResponse, IAppView, SourceResponse } from '../../model/model';
 import News from './news/news';
 import Sources from './sources/sources';
 
@@ -11,12 +11,12 @@ export class AppView implements IAppView {
         this.sources = new Sources();
     }
 
-    drawNews(data: Pick<CommonResponse, "articles"| "status">) {
+    drawNews(data: ArticleResponse) {
         const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 
-    drawSources(data: Pick<CommonResponse, "sources"| "status">) {
+    drawSources(data: SourceResponse) {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }
