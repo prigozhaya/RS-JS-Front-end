@@ -1,4 +1,4 @@
-import { ArticleResponse } from '../../model/model';
+import { CommonResponse } from '../../model/model';
 import AppController from '../controller/controller';
 import { AppView } from '../view/appView';
 
@@ -11,8 +11,8 @@ class App {
     }
 
     start() {
-        document?.querySelector('.sources')?.addEventListener('click', (e) => this.controller.getNews(e, (data: ArticleResponse) => this.view.drawNews(data)));
-        this.controller.getSources((data: ArticleResponse) => this.view.drawSources(data));
+        document?.querySelector('.sources')?.addEventListener('click', (e) => this.controller.getNews(e, (data: CommonResponse) => this.view.drawNews(data)));
+        this.controller.getSources((data: CommonResponse) => this.view.drawSources(data));
     }
 }
 

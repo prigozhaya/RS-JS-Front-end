@@ -1,8 +1,8 @@
-import { ArticleResponse, IAppController } from '../../model/model';
+import { CommonResponse, IAppController } from '../../model/model';
 import AppLoader from './appLoader'; 
 
 class AppController extends AppLoader implements IAppController{
-    getSources(callback:(data: ArticleResponse) => void) {
+    getSources(callback:(data: CommonResponse) => void) {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -11,7 +11,7 @@ class AppController extends AppLoader implements IAppController{
         );
     }
 
-    getNews(e: Event, callback:(data: ArticleResponse) => void) {
+    getNews(e: Event, callback:(data: CommonResponse) => void) {
         let target: HTMLElement | null | ParentNode | undefined = e.target as HTMLElement; //HTMLElement
         const newsContainer: HTMLElement | null = e.currentTarget as HTMLElement;
 

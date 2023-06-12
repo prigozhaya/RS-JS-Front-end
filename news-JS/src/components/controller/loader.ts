@@ -1,4 +1,4 @@
-import { ArticleResponse, EndpointObject, HTTPMethods, ILoader } from "../../model/model";
+import { CommonResponse, EndpointObject, HTTPMethods, ILoader } from "../../model/model";
 
 
 class Loader implements ILoader{
@@ -12,7 +12,7 @@ class Loader implements ILoader{
 
     getResp(
         { endpoint, options = {} }: EndpointObject,
-        callback = (data: ArticleResponse) => {
+        callback = (data: CommonResponse) => {
             console.error('No callback for GET response');
         }
     ) {
@@ -40,7 +40,7 @@ class Loader implements ILoader{
         return url.slice(0, -1);
     }
 
-    private load(method: HTTPMethods, endpoint: string, callback: (data: ArticleResponse) => void, options = {}) {
+    private load(method: HTTPMethods, endpoint: string, callback: (data: CommonResponse) => void, options = {}) {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
