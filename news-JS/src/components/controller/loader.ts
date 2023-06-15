@@ -1,4 +1,5 @@
-import { CommonResponse, EndpointObject, HTTPMethods, ILoader } from "../../model/model";
+import { CommonResponse, EndpointObject, HTTPMethods } from "../../model/model";
+import { ILoader } from "./Loader.type";
 
 
 class Loader implements ILoader{

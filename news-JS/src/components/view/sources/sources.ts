@@ -1,4 +1,6 @@
-import { ISources, Source } from '../../../model/model';
+
+import { Source } from '../../../model/model';
+import { ISources } from './Sources.type';
 import './sources.css';
 
 class Sources implements ISources {

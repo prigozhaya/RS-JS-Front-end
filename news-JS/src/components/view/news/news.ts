@@ -1,4 +1,6 @@
-import { Article, INews } from '../../../model/model';
+
+import { Article } from '../../../model/model';
+import { INews } from './News.type';
 import './news.css';
 
 class News implements INews {

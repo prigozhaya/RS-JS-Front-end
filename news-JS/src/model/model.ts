@@ -33,10 +33,6 @@ export type ArticleResponse = Pick<CommonResponse, "articles"| "status" | "total
 
 export type SourceResponse = Pick<CommonResponse, "sources"| "status">;
 
-export interface IAppController {
-    getNews(e: Event, callback: (data: ArticleResponse) => void): void;
-    getSources(callback: (data: SourceResponse) => void): void;
-}
 
 export type EndpointObject = {
     endpoint: string;
@@ -50,20 +46,3 @@ export enum HTTPMethods {
     DELETE = 'DELETE',
     HEAD = 'HEAD',
 }
-
-export interface ILoader {
-    getResp({ endpoint, options }: EndpointObject, callback: (data: Partial<CommonResponse>) => void): void;
-}
-
-export interface IAppView {
-  drawNews(data: ArticleResponse): void;
-  drawSources(data: SourceResponse): void;
-}
-
-export interface ISources {
-  draw(data: Readonly<Array<Source>>): void;
-}
-
-export interface INews {
-    draw(data: Readonly<Array<Article>>): void;
-  }

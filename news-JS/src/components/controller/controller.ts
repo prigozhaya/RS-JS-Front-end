@@ -1,4 +1,6 @@
-import { ArticleResponse, IAppController, SourceResponse } from '../../model/model';
+
+import { ArticleResponse, SourceResponse } from '../../model/model';
+import { IAppController } from './appController.type';
 import AppLoader from './appLoader'; 
 
 class AppController extends AppLoader implements IAppController{
@@ -18,10 +20,8 @@ class AppController extends AppLoader implements IAppController{
         while (target !== newsContainer) {
             if ((target as HTMLElement)?.classList.contains('source__item')) {
                 const sourceId = (target as HTMLElement)?.getAttribute('data-source-id');
-                if (newsContainer?.getAttribute('data-source') !== sourceId) {
-                    if(sourceId){
-                        newsContainer?.setAttribute('data-source', sourceId);
-                    }
+                if (sourceId && newsContainer?.getAttribute('data-source') !== sourceId) {
+                    newsContainer?.setAttribute('data-source', sourceId);
                     super.getResp(
                         {
                             endpoint: 'everything',
