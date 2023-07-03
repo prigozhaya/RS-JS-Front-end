@@ -1,6 +1,6 @@
 import {EditorState} from "@codemirror/state";
 import {EditorView} from "@codemirror/view";
-import { Level } from "../types";
+import { Level, LevelsData } from "../types";
 import data from '../../data/index.json' assert { type: 'json' };
 
 class HtmlViewer {
@@ -14,12 +14,13 @@ class HtmlViewer {
   init(level: Level, state: EditorState | null, view: EditorView | null) {
     this.lvl = level;
     this.view = view;
-    let levels = data.levels;
-    let elem: HTMLElement | null;
-    if (elem = document.querySelector('#html-viewer')) {
-      if (elem = document.querySelector('#html-viewer pre code')) {
-        let text = view?.state.doc.toString();
-        let transaction = view?.state.update({changes: {from: 0, to: text?.length, insert: levels[+this.lvl.lv - 1].htmlViewer}});
+    const levelsData: LevelsData = data as LevelsData;
+    let elem: HTMLElement | null= document.querySelector('#html-viewer');
+    if (elem) {
+      elem = document.querySelector('#html-viewer pre code')
+      if (elem) {
+        const text = view?.state.doc.toString();
+        const transaction = view?.state.update({changes: {from: 0, to: text?.length, insert: levelsData.levels[+this.lvl.lv - 1].htmlViewer}});
         if (transaction)
           view?.dispatch(transaction);
       }
@@ -27,12 +28,13 @@ class HtmlViewer {
   }
 
   refresh() {
-    let levels = data.levels;
-    let elem: HTMLElement | null;
-    if (elem = document.querySelector('#html-viewer')) {
-      if (elem = document.querySelector('#html-viewer pre code')) {
-        let text = this.view?.state.doc.toString();
-        let transaction = this.view?.state.update({changes: {from: 0, to: text?.length, insert: levels[+this.lvl.lv - 1].htmlViewer}});
+    const levelsData: LevelsData = data as LevelsData;
+    let elem: HTMLElement | null = document.querySelector('#html-viewer');
+    if (elem) {
+      elem = document.querySelector('#html-viewer pre code')
+      if (elem) {
+        const text = this.view?.state.doc.toString();
+        const transaction = this.view?.state.update({changes: {from: 0, to: text?.length, insert: levelsData.levels[+this.lvl.lv - 1].htmlViewer}});
         if (transaction)
         this.view?.dispatch(transaction);
       }

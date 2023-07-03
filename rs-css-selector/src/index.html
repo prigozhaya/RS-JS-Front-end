@@ -24,7 +24,9 @@
         </header>
         <main>
             <div class="container">
-                <aside id="menu-block"></aside>
+                <aside id="menu-block">
+                    <h3 class="level-progress">1/10</h3>
+                </aside>
                 <div class="task-teks-wrapper">
                     <h2 id="task-text" class="task-text">1 Task!</h2>
                     <div class="help">
@@ -33,10 +35,10 @@
                             You're about to learn CSS Selectors! Selectors are how you pick which element to apply
                             styles to.
                         </p>
-                        <a class="help-button" href="#">Ok, got it!</a>
+                        <a id="close-help" class="help-button" href="#">Ok, got it!</a>
                     </div>
 
-                    <a class="help-button" href="#">Help, I'm stuck!</a>
+                    <a id="open-help" class="help-button" href="#">Help, I'm stuck!</a>
                 </div>
                 <div class="game-wrapper">
                     <div class="table-wrapper">
@@ -53,13 +55,22 @@
                 <div class="task-editors-wrapper">
                     <div class="editors-wrapper">
                         <div id="css-editor">
+                            <div class="editors-name">
+                                <p class="editors">CSS Editor</p>
+                                <p class="editor-file">style.css</p>
+                            </div>
                             <pre><code class="language-css"></code></pre>
                           </div>
                           <div id="html-viewer">
+                            <div class="editors-name">
+                                <p class="editors">HTML Viewer</p>
+                                <p class="editor-file">table.html</p>
+                            </div>
                             <pre><code class="language-html"></code></pre>
                           </div>
                     </div>
                 </div>
+                <div class="enter-button">enter</div>
             </div>
         </main>
         <footer>

@@ -2,7 +2,7 @@ import data from '../../data/index.json' assert { type: 'json' };
 import {EditorState} from "@codemirror/state";
 import {EditorView} from "@codemirror/view";
 import TaskBlock from '../task-block';
-import { Level } from '../types';
+import { Level, LevelsData } from '../types';
 import HtmlViewer from '../html-viewer';
 
 class MenuBlock {
@@ -13,17 +13,17 @@ class MenuBlock {
 
   init(startLevel: Level, taskBlock: TaskBlock, htmlViewer: HtmlViewer, state: EditorState | null, view: EditorView | null) {
     this.lvl = startLevel;
-    let levelProgress: HTMLElement | null;
-    let elem: HTMLElement | null;
-    if (elem = document.getElementById('menu-block')) {
-      let levels = data.levels;
+    // let levelProgress: HTMLElement | null;
+    const elem: HTMLElement | null= document.getElementById('menu-block');
+    if (elem) {
+      const levelsData: LevelsData = data as LevelsData;
       const taskEl = document.createElement("div");
       taskEl.classList.add("task");
-      levels.forEach((level:{order:string, task:string, html:string, htmlViewer:string, tableWidth:string, help:string})=>{
+      levelsData.levels.forEach((level:{order:string, task:string, html:string, htmlViewer:string, tableWidth:string, help:string})=>{
         const lvlTask = document.createElement("div");
         lvlTask.textContent = `${level.order} level`;
 
-        lvlTask.addEventListener("click", (e) => {
+        lvlTask.addEventListener("click", () => {
           taskEl.textContent = level.task;
           this.lvl.lv = +level.order;
           taskBlock.refresh();

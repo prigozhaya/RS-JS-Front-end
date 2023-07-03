@@ -7,6 +7,7 @@ import {basicSetup} from "codemirror";
 import {EditorState, Compartment} from "@codemirror/state";
 import {html} from "@codemirror/lang-html";
 import {css} from "@codemirror/lang-css";
+import { Level } from '../types';
 
 class App {
     cssEditor: CssEditor;
@@ -17,7 +18,7 @@ class App {
     startStateCSS: EditorState | null;
     viewHTML: EditorView | null;
     viewCSS: EditorView | null;
-    level: {lv:number};
+    level: Level;
 
     constructor() {
       this.cssEditor = new CssEditor;
@@ -59,8 +60,8 @@ class App {
           html()
         ],
       });
-      let elemHTML: HTMLElement | null;
-      if (elemHTML = document.querySelector('#html-viewer pre code')) {       
+      const elemHTML: HTMLElement | null= document.querySelector('#html-viewer pre code');
+      if (elemHTML) {       
         this.viewHTML = new EditorView({
           state: this.startStateHTML,
           extensions: [
@@ -73,17 +74,12 @@ class App {
       //CSS
       let flag = true;
       this.startStateCSS = EditorState.create({
-        doc: `//asd
-//asd
-        asd
-        asd
-        asd
-        `,
+        doc: `//input css selector here`,
         extensions: [
           basicSetup,
           tabSize.of(EditorState.tabSize.of(2)),
           EditorView.updateListener.of(function(e) {
-            let sync_val = e.state.doc.toString();
+            const sync_val = e.state.doc.toString();
             if (flag && sync_val === 'asd') {
               alert('works');
               flag = false;
@@ -94,8 +90,8 @@ class App {
           css()
         ]
       })
-      let elemCSS: HTMLElement | null;
-      if (elemCSS = document.querySelector('#css-editor pre code')) {       
+      const elemCSS: HTMLElement | null = document.querySelector('#css-editor pre code');
+      if (elemCSS) {       
         this.viewCSS = new EditorView({
           state: this.startStateCSS,
           extensions: [

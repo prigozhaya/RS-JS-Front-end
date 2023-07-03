@@ -1,15 +1,16 @@
+import { Level } from "../types";
+
 class CssEditor {
-    
-    constructor() {
-        
-    }
+  lvl: Level;
+  constructor() {
+    this.lvl = {lv: 1}
+  }
 
     init(level: object) {
-      let elem : HTMLElement | null;
-      if (elem = document.getElementById('css-editor')) {
-        // elem.innerHTML = `<pre>
-        //     <code contenteditable="true" spellcheck="false"><div><p>css</p></div></code>
-        //   </pre>`;
+      const elem : HTMLElement | null= document.getElementById('css-editor');
+      if (elem) {
+          console.log(level)
+          console.log(elem)
       }
       
     }

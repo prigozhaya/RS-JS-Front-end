@@ -1,5 +1,6 @@
 import data from '../../data/index.json' assert { type: 'json' };
-import { Level } from '../types';
+import { Level, LevelsData } from '../types';
+import initHelp from './helpers';
 
 class TaskBlock {
   lvl: Level;
@@ -9,57 +10,48 @@ class TaskBlock {
 
   init(level: Level) {
     this.lvl = level;
-    let levels = data.levels;
-    let elem: HTMLElement | null;
-    if (elem = document.getElementById('task-text')) {
-      elem.textContent = levels[+this.lvl.lv - 1].task;
+    const levelsData: LevelsData = data as LevelsData;
+    const elem: HTMLElement | null= document.getElementById('task-text');
+    if (elem) {
+      elem.textContent = levelsData.levels[+this.lvl.lv - 1].task;
     }
 
-    let helpNote: HTMLElement | null;
-    if (helpNote = document.getElementById('help-note')) {
-      helpNote.textContent = levels[+this.lvl.lv - 1].help;
+    const helpNote: HTMLElement | null= document.getElementById('help-note');
+    if (helpNote) {
+      helpNote.textContent = levelsData.levels[+this.lvl.lv - 1].help;
     }
 
-    let table : HTMLElement | null;
-    if(table= document.querySelector('#table')){
-      table.innerHTML = levels[+this.lvl.lv - 1].html;
+    const table : HTMLElement | null = document.querySelector('#table');
+    if(table){
+      table.innerHTML = levelsData.levels[+this.lvl.lv - 1].html;
     const tableSurface = document.querySelector('.table-wrapper');
-    tableSurface?.setAttribute('style', `width: ${levels[+this.lvl.lv - 1].tableWidth}`);
+    tableSurface?.setAttribute('style', `width: ${levelsData.levels[+this.lvl.lv - 1].tableWidth}`);
     const tableEdge = document.querySelector('.table-edge');
-    tableEdge?.setAttribute('style', `width: ${levels[+this.lvl.lv - 1].tableWidth}`);
+    tableEdge?.setAttribute('style', `width: ${levelsData.levels[+this.lvl.lv - 1].tableWidth}`);
     } 
+
+    initHelp();
   }
 
   refresh() {
-    let elem: HTMLElement | null;
-    let levels = data.levels;
-    if (elem = document.getElementById('task-text')) {
-      elem.textContent = levels[+this.lvl.lv - 1].task;
+    const elem: HTMLElement | null = document.getElementById('task-text');
+    const levelsData: LevelsData = data as LevelsData;
+    if (elem) {
+      elem.textContent = levelsData.levels[+this.lvl.lv - 1].task;
     }
-    let helpNote: HTMLElement | null;
-    if (helpNote = document.getElementById('help-note')) {
-      helpNote.textContent = levels[+this.lvl.lv - 1].help;
+    const helpNote: HTMLElement | null = document.getElementById('help-note');
+    if (helpNote ) {
+      helpNote.textContent = levelsData.levels[+this.lvl.lv - 1].help;
     }
-    let table : HTMLElement | null;
-    if(table= document.querySelector('#table')){
-      table.innerHTML = levels[+this.lvl.lv - 1].html;
+    const table : HTMLElement | null= document.querySelector('#table');
+    if(table){
+      table.innerHTML = levelsData.levels[+this.lvl.lv - 1].html;
     const tableSurface = document.querySelector('.table-wrapper');
-    tableSurface?.setAttribute('style', `width: ${levels[+this.lvl.lv - 1].tableWidth}`);
+    tableSurface?.setAttribute('style', `width: ${levelsData.levels[+this.lvl.lv - 1].tableWidth}`);
     const tableEdge = document.querySelector('.table-edge');
-    tableEdge?.setAttribute('style', `width: ${levels[+this.lvl.lv - 1].tableWidth}`);
+    tableEdge?.setAttribute('style', `width: ${levelsData.levels[+this.lvl.lv - 1].tableWidth}`);
     } 
   }
 }
 
-const openHelp = document.getElementById('open-help');
-  openHelp?.addEventListener("click", (e) => {
-    document.querySelector('.help')?.classList.add("show");
-    openHelp.classList.add("hidden");
-})
-
-const closeHelp = document.getElementById('close-help');
-  closeHelp?.addEventListener("click", (e) => {
-    document.querySelector('.help')?.classList.remove("show");
-    openHelp?.classList.remove("hidden");
-})
 export default TaskBlock;

@@ -3,7 +3,7 @@
     "order": "1",
     "task": "select first plate", 
     "html": "<plate></plate><plate></plate>",
-    "htmlViewer": "<div class='table'><plate /><plate /></div>",
+    "htmlViewer": "<div class='table'>\n<plate /><plate />\n</div>",
     "tableWidth": "270px",
     "help": "Try to use plate selector"
   },
