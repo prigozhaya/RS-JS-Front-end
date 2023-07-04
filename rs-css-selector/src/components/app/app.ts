@@ -44,7 +44,7 @@ class App {
       //HTML
       const tabSize = new Compartment;
       const fixedHeightEditor = EditorView.theme({
-        "&": {height: "300px"},
+        "&": {height: "420px"},
         ".cm-scroller": {overflow: "auto"}
       });
       const minHeightEditor = EditorView.theme({

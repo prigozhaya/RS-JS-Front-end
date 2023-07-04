@@ -10,10 +10,10 @@ class TaskBlock {
 
   init(level: Level) {
     this.lvl = level;
-    const levelsData: LevelsData = data as LevelsData;
+    const levelsData: LevelsData = data as LevelsData;0
     const elem: HTMLElement | null= document.getElementById('task-text');
     if (elem) {
-      elem.textContent = levelsData.levels[+this.lvl.lv - 1].task;
+      elem.textContent = levelsData.levels[+this.lvl.lv - 1].taskHeader;
     }
 
     const helpNote: HTMLElement | null= document.getElementById('help-note');
@@ -37,7 +37,7 @@ class TaskBlock {
     const elem: HTMLElement | null = document.getElementById('task-text');
     const levelsData: LevelsData = data as LevelsData;
     if (elem) {
-      elem.textContent = levelsData.levels[+this.lvl.lv - 1].task;
+      elem.textContent = levelsData.levels[+this.lvl.lv - 1].taskHeader;
     }
     const helpNote: HTMLElement | null = document.getElementById('help-note');
     if (helpNote ) {

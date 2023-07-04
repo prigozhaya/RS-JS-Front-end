@@ -1,19 +1,93 @@
 {
   "levels": [{
     "order": "1",
-    "task": "select first plate", 
-    "html": "<plate></plate><plate></plate>",
-    "htmlViewer": "<div class='table'>\n<plate /><plate />\n</div>",
+    "taskHeader": "Select the plates",
+    "task": "<h3>Type Selector</h3><p>Selects all elements of type A. Type refers to the type of tag, so div, p and ul are all different element types.</p><h3>Example:</h3><p><span style= 'color: #e9a053'>div</span> selects all div elements.</p>", 
+    "html": "<plate class='black strobe' title='plate'></plate><plate class='strobe' title='plate'></plate>",
+    "htmlViewer": "<div class='table'>\n  <plate class='black'></plate>\n  <plate></plate>\n</div>",
     "tableWidth": "270px",
-    "help": "Try to use plate selector"
+    "help": "plate"
   },
   {
     "order": "2",
-    "task": "select another", 
-    "html": "<plate></plate><plate><apple></apple></plate>",
-    "htmlViewer": "<div class='table'><plate /><plate /></div>",
+    "taskHeader": "Select ham",
+    "task": "<h3>Descendant Selector</h3><p>Select an element of type A inside another element of type B.</p><h3>Example:</h3><p><span style= 'color: #e9a053'>p  span</span> selects all span elements that are inside of any p</p>", 
+    "html": "<plate title='plate'><ham class='strobe' title='ham'></ham></plate><plate title='plate'><tomato title='tomato'></tomato></plate>",
+    "htmlViewer": "<div class='table'>\n  <plate>\n     <ham></ham>\n  </plate>\n  <plate>\n     <tomato></tomato>\n  </plate>\n</div>",
     "tableWidth": "270px",
-    "help": "Try to use plate.tomato selector"
-  } 
+    "help": "plate ham"
+  },
+  {
+    "order": "3",
+    "taskHeader": "Select the black plate",
+    "task": "<h3>Class Selector</h3><p>Select elements by their class A. The class selector selects all elements with that class attribute. Elements can have many classes.</p><h3>Example:</h3><p><span style= 'color: #e9a053'>.aple</span> selects all elements with class='aple'</p>", 
+    "html": "<plate title='plate'></plate><plate class='black strobe' title='plate'></plate>",
+    "htmlViewer": "<div class='table'>\n  <plate></plate>\n  <plate class='black'></plate>\n</div>",
+    "tableWidth": "270px",
+    "help": ".black"
+  },
+  {
+    "order": "4",
+    "taskHeader": "Select the dancing bread whith cheese",
+    "task": "<h3>ID Selector</h3><p>Select elements with an ID</p><h3>Example:</h3><p><span style= 'color: #e9a053'>#aple</span> selects all elements with id='aple'</p>", 
+    "html": "<plate class='black' title='plate'><bread title='bread'><ham title='ham'></ham></bread></plate><plate title='plate'><bread class='strobe' title='bread'><cheese title='cheese'></cheese></bread></plate>",
+    "htmlViewer": "<div class='table'>\n  <plate class='black'>\n    <bread>\n      <ham></ham>\n    </bread>\n  </plate>\n  <plate>\n    <bread id='with-cheese'>\n      <cheese></cheese>\n    </bread>\n  </plate>\n</div>",
+    "tableWidth": "390px",
+    "help": "#with-cheese"
+  },
+  {
+    "order": "5",
+    "taskHeader": "Select the dancing cheese and tomato",
+    "task": "<h3>Comma</h3><p>Select multiple elements using comma</p><h3>Example:</h3><p><span style= 'color: #e9a053'>div, p</span>  selects all div elements as well as all elements p</p>", 
+    "html": "<plate class='black' title='plate'><bread title='bread'><cheese  class='strobe' title='cheese'></cheese></bread></plate><plate class='black' title='plate'><bread title='bread'><tomato class='strobe' title='tomato'></tomato></bread></plate>",
+    "htmlViewer": "<div class='table'>\n<plate class='black'>\n  <bread>\n    <cheese></cheese>\n  </bread>\n</plate>\n<plate class='black'>\n  <bread>\n    <tomato></tomato>\n  </bread>\n</plate></div>",
+    "tableWidth": "390px",
+    "help": "cheese, tomato"
+  },
+  {
+    "order": "6",
+    "taskHeader": "Select the bread whith cheese, black plate and tomato",
+    "task": "<h3>Comma Combination</h3><p>Select elements with their ID, class, tag using commas</p><h3>Example:</h3><p><span style= 'color: #e9a053'>#aple, .red, div</span> you can combine diferent selectors with comma</p>", 
+    "html": "<plate class='black strobe' title='plate'><bread title='bread'><ham title='ham'></ham></bread></plate><plate title='plate'><bread class='strobe' title='bread'><cheese title='cheese'></bread></plate><plate title='plate'><bread title='bread'><tomato class='strobe' title='tomato'></tomato></bread></plate>",
+    "htmlViewer": "<div class='table'>\n  <plate class='black'>\n    <bread>\n      <ham></ham>\n    </bread>\n  </plate>\n  <plate>\n    <bread id='with-cheese'>\n      <cheese></cheese>\n    </bread>\n  </plate>\n  <plate>\n    <bread>\n      <tomato></tomato>\n    </bread>\n  </plate>\n</div>",
+    "tableWidth": "390px",
+    "help": "#with-cheese, .black, tomato"
+  },
+  {
+    "order": "7",
+    "taskHeader": "Select all",
+    "task": "<h3>Universal Selector</h3><p>Select all elements you have</p><h3>Example:</h3><p><span style= 'color: #e9a053'>*</span> selects all elements'</p>", 
+    "html": "<plate class='strobe' title='plate'><bread title='bread'></ham></bread></plate><plate class='black strobe' title='plate'><bread title='bread'><cheese title='cheese'></bread></plate><plate class='strobe' title='plate'><tomato title='tomato'></tomato></plate>",
+    "htmlViewer": "<div class='table'>\n  <plate>\n    <bread></bread>\n  </plate>\n  <plate class='black'>\n    <bread id='with-cheese'>\n      <cheese></cheese>\n    </bread>\n  </plate>\n  <plate>\n    <tomato></tomato>\n    </plate>\n</div>",
+    "tableWidth": "390px",
+    "help": "*"
+  },
+  {
+    "order": "8",
+    "taskHeader": "Select all stuffing for sandwiches",
+    "task": "<h3>Universal Selector Combination</h3><p>Select all elements inside of A</p><h3>Example:</h3><p><span style= 'color: #e9a053'>div *</span> selects all elements inside of div</p>", 
+    "html": "<plate title='plate'><bread title='bread'><cheese class='strobe title='cheese'' title='cheese'><cheese><tomato title='tomato'></tomato></bread></plate><plate title='plate'><bread title='bread'><ham class='strobe' title='ham'></ham></bread></plate><plate class='black' title='plate'><tomato title='tomato'></tomato></plate>",
+    "htmlViewer": "<div class='table'>\n  <plate>\n    <bread>\n      <cheese></cheese>\n      <tomato></tomato>\n    </bread>\n  </plate>\n  <plate>\n    <bread id='with-ham'>\n      <ham></ham>\n    </bread>\n  </plate>\n  <plate class='black'>\n    <bread>\n      <tomato></tomato>\n    </bread>\n  </plate>\n</div>",
+    "tableWidth": "390px",
+    "help": "#with-cheese"
+  },
+  {
+    "order": "9",
+    "taskHeader": "Select tomatos directly on a plate",
+    "task": "<h3>Child Selector</h3><p> unlike whitespace, selects only those elements that are directly children of the specified element.</p><h3>Example:</h3><p><span style= 'color: #e9a053'>A > B</span> selects all B that are a direct children A</p>", 
+    "html": "<plate class='black' title='plate'><tomato class='strobe' title='tomato'></plate><plate title='plate'><tomato class='strobe' title='tomato'></tomato></plate><tomato title='tomato'></tomato>",
+    "htmlViewer": "<div class='table'>\n  <plate class='black'>\n    <tomato></tomato>\n  </plate>\n  <plate>\n    <tomato></tomato>\n  </plate>\n  <tomato></tomato>\n</div>",
+    "tableWidth": "390px",
+    "help": "plate > tomato"
+  },
+  {
+    "order": "10",
+    "taskHeader": "Select tomatos directly NOT on a plate",
+    "task": "<h3>General Sibling Selector</h3><p>Selects elements that are at the same nesting level, after the specified element, with the same parent.</p><h3>Example:</h3><p><span style= 'color: #e9a053'>p ~ span</span> will select all <span> elements that are after the <p> element within the same parent.</p>", 
+    "html": "<plate title='plate'><tomato title='tomato'></tomato></plate><tomato class='strobe' title='tomato'></tomato><tomato class='strobe' title='tomato'></tomato>",
+    "htmlViewer": "<div class='table'>\n  <plate>\n    <tomato></tomato>\n  </plate>\n  <tomato></tomato>\n  <tomato></tomato>\n</div>",
+    "tableWidth": "390px",
+    "help": "table ~ tomato"
+  }
   ]
 }

@@ -13,7 +13,12 @@ class MenuBlock {
 
   init(startLevel: Level, taskBlock: TaskBlock, htmlViewer: HtmlViewer, state: EditorState | null, view: EditorView | null) {
     this.lvl = startLevel;
-    // let levelProgress: HTMLElement | null;
+    const levelsData: LevelsData = data as LevelsData;
+    const levelOreder: HTMLElement | null= document.getElementById('level-progress');
+    if (levelOreder) {
+      levelOreder.textContent = levelsData.levels[+this.lvl.lv - 1].order;
+    }
+
     const elem: HTMLElement | null= document.getElementById('menu-block');
     if (elem) {
       const levelsData: LevelsData = data as LevelsData;
@@ -21,13 +26,25 @@ class MenuBlock {
       taskEl.classList.add("task");
       levelsData.levels.forEach((level:{order:string, task:string, html:string, htmlViewer:string, tableWidth:string, help:string})=>{
         const lvlTask = document.createElement("div");
+        lvlTask.classList.add("task-oreder");
         lvlTask.textContent = `${level.order} level`;
 
         lvlTask.addEventListener("click", () => {
-          taskEl.textContent = level.task;
+          taskEl.innerHTML = level.task;
           this.lvl.lv = +level.order;
           taskBlock.refresh();
           htmlViewer.refresh();
+          const currentLevel = document.querySelectorAll(".task-oreder");
+          if (currentLevel) {
+            currentLevel.forEach((e) => {
+              e.classList.remove("current");
+            });
+            lvlTask.classList.add("current");
+          }
+          if (levelOreder) {
+            levelOreder.textContent = levelsData.levels[+this.lvl.lv - 1].order;
+          }
+
         });
         elem?.appendChild(lvlTask);
       })

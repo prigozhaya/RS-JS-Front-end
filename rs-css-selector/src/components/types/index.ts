@@ -4,7 +4,8 @@ export type Level = {
 
 export type TaskData = {
   order: string,
-  task: string, 
+  taskHeader: string,
+  task: string,
   html: string,
   htmlViewer: string,
   tableWidth: string,
