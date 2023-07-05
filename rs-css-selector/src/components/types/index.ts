@@ -1,5 +1,7 @@
 export type Level = {
   lv:number;
+  currCssSelector: string;
+  enterPressed: boolean;
 };
 
 export type TaskData = {

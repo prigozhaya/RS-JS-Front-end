@@ -8,6 +8,7 @@ import {EditorState, Compartment} from "@codemirror/state";
 import {html} from "@codemirror/lang-html";
 import {css} from "@codemirror/lang-css";
 import { Level } from '../types';
+import setLocalStorage from '../helpers/saver';
 
 class App {
     cssEditor: CssEditor;
@@ -25,7 +26,7 @@ class App {
       this.htmlViewer = new HtmlViewer;
       this.menuBlock = new MenuBlock;
       this.taskBlock = new TaskBlock;
-      this.level = {lv: 1};
+      this.level = {lv: localStorage.getItem("level") ? Number(localStorage.getItem("level")): 1, currCssSelector:'', enterPressed: false};
       this.startStateHTML = null;
       this.startStateCSS = null;
       this.viewHTML = null;
@@ -34,10 +35,11 @@ class App {
 
     start() { 
       this.initEditors();
-      this.cssEditor.init(this.level);
-      this.htmlViewer.init(this.level, this.startStateHTML, this.viewHTML);
-      this.menuBlock.init(this.level, this.taskBlock, this.htmlViewer, this.startStateHTML, this.viewHTML);
+      this.initSaver();
       this.taskBlock.init(this.level);
+      this.htmlViewer.init(this.level, this.viewHTML);
+      this.menuBlock.init(this.level, this.taskBlock, this.htmlViewer, this.viewHTML);
+      this.cssEditor.init(this.level, this.viewCSS, this.taskBlock, this.htmlViewer, this.viewHTML, this.menuBlock);
     }
 
     initEditors() {
@@ -72,17 +74,16 @@ class App {
       }
 
       //CSS
-      let flag = true;
       this.startStateCSS = EditorState.create({
         doc: `//input css selector here`,
         extensions: [
           basicSetup,
           tabSize.of(EditorState.tabSize.of(2)),
-          EditorView.updateListener.of(function(e) {
-            const sync_val = e.state.doc.toString();
-            if (flag && sync_val === 'asd') {
-              alert('works');
-              flag = false;
+          EditorView.updateListener.of((e) => {
+            this.level.currCssSelector = e.state.doc.toString();
+            this.level.enterPressed = !!e.state.doc.toString().match(/\n/g)?.length;
+            if (this.level.enterPressed) {
+              this.cssEditor.init(this.level, this.viewCSS, this.taskBlock, this.htmlViewer, this.viewHTML, this.menuBlock);
             }
           }),
           fixedHeightEditor,
@@ -100,6 +101,16 @@ class App {
           parent: elemCSS
         })
       }
+    }
+
+    initSaver(){
+    window.addEventListener("beforeunload",() => { setLocalStorage(this.level.lv.toString())});
+
+    window.addEventListener("load", () => {
+      if(localStorage.getItem("level")){
+        this.level.lv = Number(localStorage.getItem("level"));
+      }
+    });
     }
 }
 

@@ -8,6 +8,9 @@ header {
     padding: 12px 15px 11px 35px;
     color: rgba(255, 255, 255, 0.3);
     text-align: left;
+    font-size: 25px;
+    margin: 0;
+    font-family: "Exo 2", "Lato", "Helvetica Neue", sans-serif;
 }
 
 .logo {
@@ -22,7 +25,7 @@ header {
 .logo plate {
     z-index: 500;
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 0;
     margin: 0;
 }
@@ -88,6 +91,9 @@ header {
 }
 .task-oreder.done::before{
     content: '🟢';
+}
+.task-oreder.done-whith-help::before{
+    content: '🟡';
 }
 
 .task-oreder:hover{
@@ -402,6 +408,10 @@ a.help-button:hover {
 
 .ͼo .cm-scroller {
     border: solid;
+}
+
+#css-editor .ͼo .cm-scroller.wrong {
+    border: solid #c70a0a 5px;
 }
 
 .ͼ2 .cm-activeLine {
