@@ -1,14 +1,23 @@
-function initHelp(): void {
-  const openHelp = document.getElementById('open-help');
-    openHelp?.addEventListener("click", () => {
+import { LevelsData } from "../types";
+
+export function initHelp(): void {
+  const help = document.getElementById('open-help');
+    help?.addEventListener("click", () => {
       document.querySelector('.help')?.classList.add("show");
-      openHelp.classList.add("hidden");
+      help.classList.add("hidden");
   })
   
-  const closeHelp = document.getElementById('close-help');
-    closeHelp?.addEventListener("click", () => {
+  const hint = document.getElementById('close-help');
+  hint?.addEventListener("click", () => {
       document.querySelector('.help')?.classList.remove("show");
-      openHelp?.classList.remove("hidden");
+      help?.classList.remove("hidden");
   })
   }
-  export default initHelp;
+
+
+  export function setTableWidth (order: number, levelsData: LevelsData): void {
+    const tableSurface = document.querySelector('.table-wrapper');
+    tableSurface?.setAttribute('style', `width: ${levelsData.levels[order].tableWidth}`);
+    const tableEdge = document.querySelector('.table-edge');
+    tableEdge?.setAttribute('style', `width: ${levelsData.levels[order].tableWidth}`);
+  }

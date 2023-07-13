@@ -26,7 +26,7 @@ class App {
       this.htmlViewer = new HtmlViewer;
       this.menuBlock = new MenuBlock;
       this.taskBlock = new TaskBlock;
-      this.level = {lv: localStorage.getItem("level") ? Number(localStorage.getItem("level")): 1, currCssSelector:'', enterPressed: false};
+      this.level = {levelOreder: localStorage.getItem("level") ? Number(localStorage.getItem("level")): 1, currentCssSelector:'', enterPressed: false};
       this.startStateHTML = null;
       this.startStateCSS = null;
       this.viewHTML = null;
@@ -80,7 +80,7 @@ class App {
           basicSetup,
           tabSize.of(EditorState.tabSize.of(2)),
           EditorView.updateListener.of((e) => {
-            this.level.currCssSelector = e.state.doc.toString();
+            this.level.currentCssSelector = e.state.doc.toString();
             this.level.enterPressed = !!e.state.doc.toString().match(/\n/g)?.length;
             if (this.level.enterPressed) {
               this.cssEditor.init(this.level, this.viewCSS, this.taskBlock, this.htmlViewer, this.viewHTML, this.menuBlock);
@@ -104,11 +104,11 @@ class App {
     }
 
     initSaver(){
-    window.addEventListener("beforeunload",() => { setLocalStorage(this.level.lv.toString())});
+    window.addEventListener("beforeunload",() => { setLocalStorage(this.level.levelOreder.toString())});
 
     window.addEventListener("load", () => {
       if(localStorage.getItem("level")){
-        this.level.lv = Number(localStorage.getItem("level"));
+        this.level.levelOreder = Number(localStorage.getItem("level"));
       }
     });
     }

@@ -1,6 +1,6 @@
 export type Level = {
-  lv:number;
-  currCssSelector: string;
+  levelOreder:number;
+  currentCssSelector: string;
   enterPressed: boolean;
 };
 
