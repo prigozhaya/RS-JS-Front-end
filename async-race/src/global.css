@@ -1,0 +1,178 @@
+body{
+  background-color: #2d2d2d;
+}
+
+p{
+  margin: 0;
+  margin: 0;
+  color: white;
+  font-family: system-ui;
+  font-size: 17px;
+}
+
+h1{
+  text-align: center;
+    padding: 20px 0;
+    font-family: system-ui;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    color: white;
+    animation: shadow 1s infinite alternate;
+}
+
+@keyframes shadow {
+  from {
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  }
+  to {
+    text-shadow: 2px 4px 5px red, 0 0 3em blue, 0 0 0.2em blue;
+
+  }
+}
+
+h3{
+  color: #ffffff;
+  font-family: system-ui;
+  margin: 0;
+}
+
+button {
+  padding: 5px 20px;
+  background: linear-gradient(rgb(255, 0, 81), blue);
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  position: relative;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+.clear-button{
+  border: solid;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(to left,rgb(255, 0, 81), blue);
+  background: none;
+}
+
+button:hover .flare {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 150px;
+  animation: flareAnimation;
+  left: -150%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.114), rgba(255, 255, 255, 0.781));
+  animation: flareAnimation 1s ;
+}
+
+@keyframes flareAnimation {
+  0% {
+      left: -150%;
+  }
+  100% {
+      left: 150%;
+  }
+}
+
+.view-switcher{
+  padding: 5px 0 40px 0;
+}
+
+.model-input{
+  padding: 5px;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(to left,rgb(255, 0, 81), blue);
+}
+
+.car-input{
+  display: flex;
+  width: 350px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.generate{
+  width: 100%;
+}
+
+.race-switcher{
+  padding: 25px 0;
+}
+
+.pagination{
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.car-button{
+  padding: 3px 10px;
+  font-size: 12px;
+}
+
+.car-action{
+  display: flex;
+  padding: 15px 0 10px 0;
+}
+
+.car-select{
+  display: flex;
+  width: 145px;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.engine-switcher{
+  padding: 5px 10px;
+}
+
+.engine-switcher.disable{
+  background: linear-gradient(rgb(163, 163, 163), rgb(56, 56, 56));
+}
+
+button.engine-switcher.disable:hover .flare {
+  height: 0;
+  width: 0;
+}
+
+.track{
+  height: 40px;
+  padding: 20px 0 10px;
+  border-bottom: dashed rgb(255, 255, 255);
+}
+
+.flag{
+  position: absolute;
+  float: right;
+  right: 5%;
+}
+
+.car{
+  position: relative;
+  left: 0;
+  transition: all 10s linear;
+}
+
+.winners-sort{
+  display: flex;
+    justify-content: center;
+}
+
+.table-button{
+  width: 150px;
+}
+
+.rating-line{
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.rating-cell{
+  width: 150px;
+  text-align: center;
+}
