@@ -1,19 +1,4 @@
 {
-  "levels": [{
-    "order": "1",
-    "task": "select first plate", 
-    "html": "<plate></plate><plate></plate>",
-    "htmlViewer": "<div class='table'>\n<plate /><plate />\n</div>",
-    "tableWidth": "270px",
-    "help": "Try to use plate selector"
-  },
-  {
-    "order": "2",
-    "task": "select another", 
-    "html": "<plate></plate><plate><apple></apple></plate>",
-    "htmlViewer": "<div class='table'><plate /><plate /></div>",
-    "tableWidth": "270px",
-    "help": "Try to use plate.tomato selector"
-  } 
-  ]
+  "carsBrands": ["Tesla", "KIA", "Opel", "Mazda", "Ford", "BMW", "Subaru", "Peugeot", "Renault", "Nissan", "Volkswagen", "Škoda"],
+  "carsModels": ["Model X", "Rio", "Astra", "Octavia", "6", "Focus", "X1", "Forester", "Partner", "Kangoo" ,"Qashqai", "Golf" ]
 }

@@ -1,3 +1,8 @@
+export enum Views {
+    Garage = 'garage',
+    Winners = 'winners',
+}
+
 export enum EngineStatus {
     Stopped = 'stopped',
     Started = 'started',
@@ -26,11 +31,16 @@ export type Car = {
     name: string;
 };
 
+export type EngineData = {
+    distance: number;
+    velocity: number;
+};
+
 export type GarageCar = {
     color?: string;
     name?: string;
     id?: number;
-    totalCount?: string |null;
+    totalCount?: string | null;
 };
 
 export type Winner = {
@@ -43,15 +53,17 @@ export type Winners = {
     id?: number;
     wins?: number;
     time?: number;
-    totalCount?: string |null;
+    totalCount?: string | null;
 };
 
 export type GarageState = {
     totalCountCars: number;
     currentPage: number;
-    cars: Array<Car>;
+    cars: Array<GarageCar>;
     inputCreate: string;
+    colorCreate: string;
     inputUpdate: string;
+    colorUpdate: string;
     selectedCar: string;
 };
 
@@ -59,6 +71,8 @@ export type WinnersState = {
     totalCountWinners: number;
     currentPage: number;
     winners: Array<Winner>;
+    sortType: Sort;
+    order: Order;
 };
 
 export type Engine = {

@@ -130,11 +130,13 @@ button:hover .flare {
   padding: 5px 10px;
 }
 
-.engine-switcher.disable{
+.engine-switcher:disabled{
   background: linear-gradient(rgb(163, 163, 163), rgb(56, 56, 56));
+  cursor: default;
+
 }
 
-button.engine-switcher.disable:hover .flare {
+button.engine-switcher:disabled:hover .flare {
   height: 0;
   width: 0;
 }
@@ -154,7 +156,7 @@ button.engine-switcher.disable:hover .flare {
 .car{
   position: relative;
   left: 0;
-  transition: all 10s linear;
+  /* transition: all 1s linear; */
 }
 
 .winners-sort{
@@ -175,4 +177,8 @@ button.engine-switcher.disable:hover .flare {
 .rating-cell{
   width: 150px;
   text-align: center;
+}
+
+.car.car-move {
+  left: 90%;
 }
