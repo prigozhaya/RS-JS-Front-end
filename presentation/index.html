@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>SCRUM</title>
+    <style type="text/css">
+      .horizontal-img.show {
+        width: 70%;
+      }
+      .show {
+        cursor: pointer;
+        width: 50%;
+        transition: width 2s 0.5s;
+        box-shadow: 0 0 0 rgb(255, 255, 255);
+        animation: shadow 1s infinite alternate;
+      }
+
+      .hide {
+        width: 0;
+        transition: width 2s 0.5s;
+      }
+
+      @keyframes shadow {
+        from {
+          box-shadow: 0 0 0 rgb(255, 255, 255);
+        }
+        to {
+          box-shadow: 10px 10px 2px rgb(113, 113, 113);
+        }
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 style="margin-bottom: 50px">SCRUM</h1>
+          <div style="display: flex; justify-content: space-between">
+            <img
+              src="/assets/web-development.png"
+              alt="web-development"
+              style="width: 300px" />
+            <figure>
+              <img src="/assets/74Uy.gif" style="width: 200px" />
+            </figure>
+            <img src="/assets/rugby.png" alt="rugby" style="width: 300px" />
+          </div>
+        </section>
+
+        <section>
+          <h1 style="margin-bottom: 50px">AGILE</h1>
+          <img src="/assets/agile.png" alt="agile" />
+        </section>
+
+        <section>
+          <h2 style="margin-bottom: 50px">Why is it needed at all?</h2>
+          <div style="position: relative">
+            <img
+              src="/assets/Why-cat.jpg"
+              alt="why cat"
+              style="position: relative" />
+            <figure>
+              <img
+                src="/assets/spiner.gif"
+                style="position: absolute; left: 48%; top: 20%; width: 50px" />
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <section>
+            <h2 style="margin-bottom: 40px">Three pillars of scrum</h2>
+            <img
+              src="assets/scrum-pillars.jpg"
+              alt="scrum pillars"
+              style="width: 500px" />
+          </section>
+
+          <section>
+            <figure>
+              <img
+                src="/assets/disappear.gif"
+                style="
+                  width: 300px;
+                  display: block;
+                  position: relative;
+                  left: 0;
+                  margin-bottom: 30px;
+                " />
+            </figure>
+            <h4 style="text-align: left; font-size: 32px; margin: 20px 0 0 0">
+              1. Transparency.
+            </h4>
+            <p style="text-align: left; font-size: 28px">
+              Transparency means presenting the facts as is. All team involved
+              in process. They all trust each other, and they have the courage
+              to keep each other abreast of good news as well as bad news.
+              Everyone strives and collectively collaborates.
+            </p>
+          </section>
+
+          <section>
+            <img
+              src="/assets/inspection-so-what.jpg"
+              style="
+                width: 300px;
+                display: block;
+                position: relative;
+                left: 0;
+                margin-bottom: 30px;
+              " />
+            <h4 style="text-align: left; font-size: 32px; margin: 20px 0 0 0">
+              2. Inspection.
+            </h4>
+            <p style="text-align: left; font-size: 28px">
+              Inspection by everyone on the Scrum Team. The inspection can be
+              done for the product, processes, people aspects, practices, and
+              continuous improvements. For example, the team openly and
+              transparently shows the product at the end of each Sprint to the
+              customer in order to gather valuable feedback.
+            </p>
+          </section>
+
+          <section>
+            <figure>
+              <img
+                src="/assets/adaptive-hamelion.gif"
+                style="
+                  width: 300px;
+                  display: block;
+                  position: relative;
+                  left: 0;
+                  margin-bottom: 30px;
+                " />
+            </figure>
+            <h4 style="text-align: left; font-size: 32px; margin: 20px 0 0 0">
+              3. Adaptation.
+            </h4>
+            <p style="text-align: left; font-size: 28px">
+              Adaptation is about continuous improvement, the ability to adapt
+              based on the results of the inspection. If the customer changes
+              the requirements during inspection, the team does not complain but
+              rather adapts by using this as an opportunity to collaborate with
+              the customer to clarify the requirements and test out the new
+              hypothesis.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom: 40px">RULES OF SCRUM</h2>
+          <img
+            src="/assets/scrum-rules.webp"
+            alt="scrum rules"
+            style="width: 700px" />
+        </section>
+
+        <section>
+          <section>
+            <h2 style="margin-bottom: 40px">SCRUM ARTIFACTS</h2>
+            <img
+              src="/assets/scrum-artifacts.png"
+              alt="scrum artifacts"
+              style="width: 700px" />
+          </section>
+          <section>
+            <h2 style="margin-bottom: 40px">Product Backlog</h2>
+            <div>
+              <img
+                src="/assets/Product-Backlog.jpg"
+                alt="product backlog"
+                class="show"
+                onclick="countRabbits(1)"
+                id="product-backlog" />
+              <img
+                src="/assets/epic-user-story.png"
+                alt="epic user-story"
+                class="hide"
+                onclick="countRabbits(0)"
+                id="epic" />
+            </div>
+          </section>
+          <section>
+            <h2 style="margin-bottom: 40px">Sprint Backlog</h2>
+            <div>
+              <img
+                src="/assets/Product-backlog-to-sprint-backlog.png"
+                alt="sprint backlog"
+                class="show"
+                onclick="countRabbits(3)"
+                id="sprint-backlog" />
+              <img
+                src="/assets/sprint-backlog.webp"
+                alt="sprint backlog table"
+                class="hide horizontal-img"
+                onclick="countRabbits(4)"
+                id="sprint-backlog-table" />
+              <img
+                src="/assets/burndown-chart.png"
+                alt="burndown chart"
+                class="hide horizontal-img"
+                onclick="countRabbits(2)"
+                id="burndown-chart" />
+            </div>
+          </section>
+          <section>
+            <h2 style="margin-bottom: 40px">Increment</h2>
+            <img
+              src="/assets/Scrum-iIncremental.png"
+              alt="increments"
+              style="width: 800px" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2 style="margin-bottom: 40px">SCRUM EVENTS</h2>
+            <img
+              src="/assets/scrum-events.png"
+              alt="scrum events"
+              style="width: 700px" />
+          </section>
+          <section>
+            <h2 style="margin-bottom: 40px">Sprint</h2>
+            <div>
+              <img
+                src="/assets/sprint.png"
+                alt="sprint"
+                class="show horizontal-img"
+                onclick="countRabbits(6)"
+                id="sprint" />
+              <img
+                src="/assets/start-end-sprint.webp"
+                alt="start-end sprint"
+                class="hide"
+                onclick="countRabbits(5)"
+                id="start-end-sprint" />
+            </div>
+          </section>
+          <section>
+            <h2 style="margin-bottom: 40px">Sprint Planning</h2>
+            <div>
+              <img
+                src="/assets/sprint-planning.png"
+                alt="sprint planning"
+                class="show"
+                onclick="countRabbits(8)"
+                id="sprint-planning" />
+              <img
+                src="/assets/Planning-Poker-Cards.webp"
+                alt="Planning Poker"
+                class="hide horizontal-img"
+                onclick="countRabbits(7)"
+                id="planning-poker" />
+            </div>
+          </section>
+          <section>
+            <h2 style="margin-bottom: 40px">Daily Scrum</h2>
+            <img
+              src="/assets/daily-scrum.jpg"
+              alt="daily-scrum"
+              style="width: 500px" />
+          </section>
+          <section>
+            <h2 style="margin-bottom: 40px">Sprint Review</h2>
+            <img
+              src="/assets/sprint-review.png"
+              alt="sprint-review"
+              style="width: 700px" />
+          </section>
+          <section>
+            <h2 style="margin-bottom: 40px">Sprint Retrospective</h2>
+            <div>
+              <img
+                src="/assets/sprint-retrospective.png"
+                alt="sprint retrospective"
+                class="show horizontal-img"
+                onclick="countRabbits(10)"
+                id="sprint-retrospective" />
+              <img
+                src="/assets/scrum-retrospective.avif"
+                alt="scrum retrospective"
+                class="hide horizontal-img"
+                onclick="countRabbits(9)"
+                id="scrum-retrospective" />
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2 style="margin-bottom: 40px">SCRUM TEAM</h2>
+            <img
+              src="/assets/scrum-team.png"
+              alt="scrum roles"
+              style="width: 600px" />
+          </section>
+
+          <section>
+            <h2 style="margin-bottom: 40px">Product Owner</h2>
+            <figure>
+              <img
+                src="/assets/product-owner-thinking.gif"
+                style="
+                  width: 300px;
+                  display: block;
+                  position: relative;
+                  left: 0;
+                  margin-bottom: 30px;
+                " />
+            </figure>
+            <h4 style="text-align: left; font-size: 32px; margin: 20px 0 0 0">
+              Main responsibilities of a product owner:
+            </h4>
+            <ul
+              style="
+                text-align: left;
+                font-size: 26px;
+                display: block;
+                padding-top: 20px;
+              ">
+              <li>Definition of the product vision</li>
+              <li>Product backlog management</li>
+              <li>Control at all stages of development</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 style="margin-bottom: 40px">Scrum Master</h2>
+            <figure>
+              <img
+                src="/assets/scrum-master-yoda.gif"
+                style="
+                  width: 300px;
+                  display: block;
+                  position: relative;
+                  left: 0;
+                  margin-bottom: 30px;
+                " />
+            </figure>
+            <h4 style="text-align: left; font-size: 32px; margin: 20px 0 0 0">
+              Main responsibilities of a scrum master:
+            </h4>
+            <ul
+              style="
+                text-align: left;
+                font-size: 26px;
+                display: block;
+                padding-top: 20px;
+              ">
+              <li>Facilitate the Scrum process</li>
+              <li>Remove impediments</li>
+              <li>Facilitate communication</li>
+              <li>Ensure transparency</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 style="margin-bottom: 40px">Development Team</h2>
+            <figure>
+              <img
+                src="/assets/programmer.gif"
+                style="
+                  width: 300px;
+                  display: block;
+                  position: relative;
+                  left: 0;
+                  margin-bottom: 30px;
+                " />
+            </figure>
+            <h4 style="text-align: left; font-size: 32px; margin: 20px 0 0 0">
+              Main responsibilities of a development team:
+            </h4>
+            <ul
+              style="
+                text-align: left;
+                font-size: 26px;
+                display: block;
+                padding-top: 20px;
+              ">
+              <li>Getting work done through a sprint</li>
+              <li>Ensuring transparency</li>
+              <li>Self-organization</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom: 40px">ADVANTAGES / DISADVANTAGES</h2>
+          <div style="display: flex; justify-content: space-between">
+            <ul style="max-width: 400px; font-size: 20px; text-align: justify">
+              <span style="font-size: 30px; font-weight: 900">+</span>
+              <li>
+                The team works in small stages, at each of which goals and ways
+                to achieve them are determined, which increases the speed of
+                work
+              </li>
+              <li>
+                The team works on different project tasks at the same time and
+                achieves the desired goal faster
+              </li>
+              <li>
+                Large tasks are divided into small ones, so it is convenient to
+                make adjustments in the process
+              </li>
+              <li>
+                Due to quick response to changes and elimination of errors,
+                financial risks are minimized
+              </li>
+              <li>Each team member knows what they are responsible for</li>
+              <li>
+                Open exchange of information makes the work as transparent as
+                possible
+              </li>
+              <li>Daily visibility of achievement keeps motivation high</li>
+            </ul>
+            <ul style="max-width: 400px; font-size: 20px; text-align: justify">
+              <span style="font-size: 30px; font-weight: 900">-</span>
+              <li>
+                Scrum is not suitable for projects that are too large and
+                complex, as there may be problems with team coordination
+              </li>
+              <li>A high level of trust in the team is required</li>
+              <li>
+                After a long period of work, the dynamics of productivity drops,
+                the team needs to be rebuilt or destroyed
+              </li>
+              <li>
+                The customer must constantly communicate with the team and give
+                feedback
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h1>Thank you for your attention!</h1>
+          <figure>
+            <img src="/assets/thank-you-bow.gif" style="width: 500px" />
+          </figure>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      function countRabbits(n) {
+        const imgArr = [
+          "product-backlog",
+          "epic",
+          "sprint-backlog",
+          "sprint-backlog-table",
+          "burndown-chart",
+          "sprint",
+          "start-end-sprint",
+          "sprint-planning",
+          "planning-poker",
+          "sprint-retrospective",
+          "scrum-retrospective",
+        ];
+        document.getElementById(`${imgArr[n]}`).classList.remove("hide");
+        document.getElementById(`${imgArr[n]}`).classList.add("show");
+        window.event.target.classList.add("hide");
+        window.event.target.classList.remove("show");
+      }
+    </script>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
