@@ -16,7 +16,8 @@ landing page for animal shelter. Project to develop layout skills, creating inte
 
 Deploy: [Shelter](https://rolling-scopes-school.github.io/prigozhaya-JSFE2023Q1/shelter/) 
 
-![Снимок экрана 2023-09-27 145215](https://github.com/prigozhaya/JS-Front-end/assets/43904197/04b74baa-b90e-476a-9f31-492a6420fb03)
+![Shelter](https://github.com/prigozhaya/RS-JS-Front-end/assets/43904197/8463be3d-3195-41ed-aeb6-788af3ead388)
+
 
 ----
 
@@ -26,7 +27,8 @@ interpretation game minesweeper. Training in working with localstorage, audio an
 
 Deploy: [Minesweeper](https://rolling-scopes-school.github.io/prigozhaya-JSFE2023Q1/minesweeper/) 
 
-![Снимок экрана 2023-09-27 151205](https://github.com/prigozhaya/JS-Front-end/assets/43904197/d5899d10-fd80-49d7-9424-90570efe3802)
+![Minesweeper](https://github.com/prigozhaya/RS-JS-Front-end/assets/43904197/673808e3-963e-4eae-ba48-5a135e560c72)
+
 
 ----
 
@@ -36,7 +38,8 @@ A copy of the [CSS Diner](https://flukeout.github.io/) app from flukeout. Traini
 
 Deploy: [RS-css-selector](https://rolling-scopes-school.github.io/prigozhaya-JSFE2023Q1/css-selector/) 
 
-![Снимок экрана 2023-09-27 154738](https://github.com/prigozhaya/JS-Front-end/assets/43904197/9f30f1bb-01aa-47a7-b88f-66c2c8b528a7)
+![RS-css-selector](https://github.com/prigozhaya/RS-JS-Front-end/assets/43904197/cac96f84-677e-4c8d-a72d-502ae39d9777)
+
 
 ----
 
@@ -47,7 +50,7 @@ Application for garage with the ability to generate cars. Training in Сommunica
 
 Deploy: [Async Race](https://rolling-scopes-school.github.io/prigozhaya-JSFE2023Q1/async-race/) 
 
-![screencapture-file-D-courses-RSschool-asunc-race-async-race-app-dist-index-html-2023-07-25-00_39_23](https://github.com/prigozhaya/JS-Front-end/assets/43904197/b9a09370-5d2d-4848-afda-cfd4876bc1e3)
+![Async Race](https://github.com/prigozhaya/RS-JS-Front-end/assets/43904197/57019cb1-ec19-4a57-ac32-e7c9ade8fae4)
 
 ----
 
@@ -58,6 +61,7 @@ Just presentation about SCRUM prepared using Reveal.
 
 Deploy: [SCRUM](https://rolling-scopes-school.github.io/prigozhaya-JSFE2023Q1/presentation/) 
 
-![screencapture-localhost-8000-2023-08-01-02_17_31](https://github.com/prigozhaya/JS-Front-end/assets/43904197/9764174e-b8bc-4938-9877-0dae9bd8d7c5)
+![SCRUM](https://github.com/prigozhaya/RS-JS-Front-end/assets/43904197/916ee8a6-3185-4589-b419-9983019b97ef)
+
 
 
